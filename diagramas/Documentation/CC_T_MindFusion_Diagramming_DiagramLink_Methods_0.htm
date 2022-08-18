@@ -1,0 +1,409 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='32444' />
+<title>MindFusion.Diagramming.DiagramLink Methods</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>DiagramLink Methods</span></td>
+</tr>
+<tr>
+<td style='height: 19px; border-top: solid 1px #FFFFFF; border-bottom: solid 1px #C8CDDE; padding: 0pt 0pt 0pt 12pt;'>
+<span style='cursor: default' onkeypress='ExpandCollapseAll_CheckKey(toggleAllImage);' onclick='ExpandCollapseAll(toggleAllImage);'>
+<img src='collapsesmall.png' title='CollapseAll image' id='toggleAllImage' />
+<label style='display: none;' id='collapseAllLabel' for='toggleAllImage'>
+Collapse All
+</label>
+<label style='display: none;' id='expandAllLabel' for='toggleAllImage'>
+Expand All
+</label>
+&#160;</span>
+<span id='membersOptionsFilterToolTip' style='cursor:default;' onmouseover='membersOptionsFilterImage.src=dropDownHoverImage.src;' onmouseout='membersOptionsFilterImage.src=dropDownImage.src;'>
+<img src='arrow.png' title='DropDown image' id='membersOptionsFilterImage' /></img>
+<label id='showAllMembersLabel' for='membersOptionsFilterImage' style='display: inherit;'>
+Members Options: Show All
+</label>
+<label id='filteredMembersLabel' for='membersOptionsFilterImage' style='display: none;'>
+Members Options: Filtered
+</label>
+</span>
+</td>
+</tr>
+</table>
+<div id='membersOptionsSpan'>
+<input id='inheritedCheckbox' type='checkbox' name='membersOptionsFilter' onclick='SetMembersOptions(this)' />
+<label for='inheritedCheckbox'>
+Include Inherited Members
+</label>
+<br />
+<input id='protectedCheckbox' type='checkbox' name='membersOptionsFilter' onclick='SetMembersOptions(this)' />
+<label for='protectedCheckbox'>
+Include Protected Members
+</label>
+<br />
+</div>
+</div>
+<div id='nstext'>
+<h2><span id='PublicMethods' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='PublicMethodsImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Public Methods</span></h2><div id='PublicMethodsSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<table class='memberlist' cellspacing='0'>
+<col width='5%' />
+<col width='35%' />
+<col width='60%' />
+<tr>
+<th>&#160;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='47394' href='M_MindFusion_Diagramming_DiagramLink_addLabel_1_String_0.htm'>addLabel</a></p></td>
+<td><p>Adds a new label to this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32446' href='M_MindFusion_Diagramming_DiagramLink_allowDrag_1_InteractionState.htm'>allowDrag</a></p></td>
+<td><p><a id='32324' href='CC_T_MindFusion_Diagramming_DiagramItem_0.htm' title=''>DiagramItem</a>.allowDrag override.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32447' href='M_MindFusion_Diagramming_DiagramLink_containsPoint_1_Point.htm'>containsPoint</a></p></td>
+<td><p><span class='repeatingLink'>DiagramItem</span>.containsPoint override.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32448' href='M_MindFusion_Diagramming_DiagramLink_endDrag_1_InteractionState.htm'>endDrag</a></p></td>
+<td><p><span class='repeatingLink'>DiagramItem</span>.endDrag override.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='34095' href='M_MindFusion_Diagramming_DiagramLink_getAutoRoute_0.htm'>getAutoRoute</a></p></td>
+<td><p>Gets a value indicating whether a link should avoid nodes by going the shortest path from its origin to its destination without crossing any other nodes.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32449' href='M_MindFusion_Diagramming_DiagramLink_getBaseBrush_0.htm'>getBaseBrush</a></p></td>
+<td><p>Gets an object that specifies how to paint the interior of the link's base shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32450' href='M_MindFusion_Diagramming_DiagramLink_getBaseShape_0.htm'>getBaseShape</a></p></td>
+<td><p>Gets the shape displayed at the beginning of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='2657' href='M_MindFusion_Diagramming_DiagramLink_getBaseShapeSize_0.htm'>getBaseShapeSize</a></p></td>
+<td><p>Gets the size of the shape displayed at the beginning of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32451' href='M_MindFusion_Diagramming_DiagramLink_getControlPoints_0.htm'>getControlPoints</a></p></td>
+<td><p>Gets a collection of the control points of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32452' href='M_MindFusion_Diagramming_DiagramLink_getDestination_0.htm'>getDestination</a></p></td>
+<td><p>Gets the destination node of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='29809' href='M_MindFusion_Diagramming_DiagramLink_getDestinationAnchor_0.htm'>getDestinationAnchor</a></p></td>
+<td><p>Gets the anchor point to which a link is connected at its destination.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='49771' href='M_MindFusion_Diagramming_DiagramLink_getDynamic_0.htm'>getDynamic</a></p></td>
+<td><p>Gets a value indicating whether a link automatically adjusts its end points' positions in order to keep pointing to the centers of nodes that it connects.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32453' href='M_MindFusion_Diagramming_DiagramLink_getEndPoint_0.htm'>getEndPoint</a></p></td>
+<td><p>Gets the last control point of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32454' href='M_MindFusion_Diagramming_DiagramLink_getHeadBrush_0.htm'>getHeadBrush</a></p></td>
+<td><p>Gets a Brush that specifies how to paint the interior of the link's arrowhead shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32536' href='M_MindFusion_Diagramming_DiagramLink_getHeadShape_0.htm'>getHeadShape</a></p></td>
+<td><p>Gets the shape displayed at the end of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='14526' href='M_MindFusion_Diagramming_DiagramLink_getHeadShapeSize_0.htm'>getHeadShapeSize</a></p></td>
+<td><p>Gets the size of the shape displayed at the end of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4168' href='M_MindFusion_Diagramming_DiagramLink_getHeadStroke_0.htm'>getHeadStroke</a></p></td>
+<td><p>Gets an object that specifies how to paint the outline of the link's arrowhead shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4169' href='M_MindFusion_Diagramming_DiagramLink_getHeadStrokeDashStyle_0.htm'>getHeadStrokeDashStyle</a></p></td>
+<td><p>Gets an object that specifies the effective line dash pattern of the outline of the link's arrowhead shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4170' href='M_MindFusion_Diagramming_DiagramLink_getHeadStrokeThickness_0.htm'>getHeadStrokeThickness</a></p></td>
+<td><p>Gets an object that specifies the line thickness of the outline of the link's arrowhead shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32455' href='M_MindFusion_Diagramming_DiagramLink_getOrigin_0.htm'>getOrigin</a></p></td>
+<td><p>Gets the origin node of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='29810' href='M_MindFusion_Diagramming_DiagramLink_getOriginAnchor_0.htm'>getOriginAnchor</a></p></td>
+<td><p>Gets the anchor point to which a link is connected at its origin.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='53337' href='M_MindFusion_Diagramming_DiagramLink_getSegmentCount_0.htm'>getSegmentCount</a></p></td>
+<td><p>Gets the number of segments that form the link's geometry.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32456' href='M_MindFusion_Diagramming_DiagramLink_getShape_0.htm'>getShape</a></p></td>
+<td><p>Gets the type of link segments and how they are positioned relatively to each other.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32457' href='M_MindFusion_Diagramming_DiagramLink_getStartPoint_0.htm'>getStartPoint</a></p></td>
+<td><p>Gets the first control point of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='14527' href='M_MindFusion_Diagramming_DiagramLink_getText_0.htm'>getText</a></p></td>
+<td><p>Gets the text displayed over&#160;this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='14628' href='M_MindFusion_Diagramming_DiagramLink_getTextAlignment_0.htm'>getTextAlignment</a></p></td>
+<td><p>Gets the link's text alignment.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='14630' href='M_MindFusion_Diagramming_DiagramLink_getTextStyle_0.htm'>getTextStyle</a></p></td>
+<td><p>Gets the link's text placement and orientation.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='48180' href='M_MindFusion_Diagramming_DiagramLink_getTopLevel_0.htm'>getTopLevel</a></p></td>
+<td><p>DiagramItem.getTopLevel override.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4171' href='M_MindFusion_Diagramming_DiagramLink_init_0.htm'>init</a></p></td>
+<td><p>Returns a Builder object used to configure this <span class='repeatingLink'>DiagramLink</span> instance.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32458' href='M_MindFusion_Diagramming_DiagramLink_intersects_1_Rectangle.htm'>intersects</a></p></td>
+<td><p>Checks whether the link contour intersects with the outline of the specified node.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4172' href='M_MindFusion_Diagramming_DiagramLink_loadFromXml_2_Element_XmlPersistContext.htm'>loadFromXml</a></p></td>
+<td><p><a id='57819' href='M_MindFusion_Diagramming_DiagramItem_loadFromXml_2_Element_XmlPersistContext.htm' title=''>DiagramItem.LoadFromXml</a> override. Loads the link's content from an XML element.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='37837' href='M_MindFusion_Diagramming_DiagramLink_putEndPointsAtNodeBorders_2_void_void.htm'>putEndPointsAtNodeBorders</a></p></td>
+<td><p>Places the link's end points on the outline of its origin and destination nodes.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='47395' href='M_MindFusion_Diagramming_DiagramLink_removeLabel_1_LinkLabel_0.htm'>removeLabel</a></p></td>
+<td><p>Removes the specified label from this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32459' href='M_MindFusion_Diagramming_DiagramLink_restoreLocationState_1_DiagramLinkState.htm'>restoreLocationState</a></p></td>
+<td><p><span class='repeatingLink'>DiagramItem.restoreLocationState</span> override.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='34096' href='M_MindFusion_Diagramming_DiagramLink_route_1_void.htm'>route</a></p></td>
+<td><p>Routes this link, regardless of whether the link's AutoRoute flag is enabled.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32460' href='M_MindFusion_Diagramming_DiagramLink_saveLocationState_0.htm'>saveLocationState</a></p></td>
+<td><p><span class='repeatingLink'>DiagramItem.saveLocationState</span> override.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4173' href='M_MindFusion_Diagramming_DiagramLink_saveToXml_2_Element_XmlPersistContext.htm'>saveToXml</a></p></td>
+<td><p>Saves the item's content into an XML element.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='34097' href='M_MindFusion_Diagramming_DiagramLink_setAutoRoute_1_Boolean.htm'>setAutoRoute</a></p></td>
+<td><p>Sets a value indicating whether a link should avoid nodes by going the shortest path from its origin to its destination without crossing any other nodes.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32461' href='M_MindFusion_Diagramming_DiagramLink_setBaseBrush_1_void.htm'>setBaseBrush</a></p></td>
+<td><p>Sets an object that specifies how to paint the interior of the link's base shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32462' href='M_MindFusion_Diagramming_DiagramLink_setBaseShape_1_Shape.htm'>setBaseShape</a></p></td>
+<td><p>Sets the shape to display at the beginning of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='14633' href='M_MindFusion_Diagramming_DiagramLink_setBaseShapeSize_1_Number.htm'>setBaseShapeSize</a></p></td>
+<td><p>Gets the size of the <span class='repeatingLink'>BaseShape</span> shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32463' href='M_MindFusion_Diagramming_DiagramLink_setControlPoints_1_Points.htm'>setControlPoints</a></p></td>
+<td><p>Sets a collection of the control points of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32464' href='M_MindFusion_Diagramming_DiagramLink_setDestination_1_DiagramNode.htm'>setDestination</a></p></td>
+<td><p>Sets the destination node of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='29811' href='M_MindFusion_Diagramming_DiagramLink_setDestinationAnchor_1_Number.htm'>setDestinationAnchor</a></p></td>
+<td><p>Sets the anchor point to which a link is connected at its destination.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='49772' href='M_MindFusion_Diagramming_DiagramLink_setDynamic_1_Boolean.htm'>setDynamic</a></p></td>
+<td><p>Sets a value indicating whether a link automatically adjusts its end points' positions in order to keep pointing to the centers of nodes that it connects.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19085' href='M_MindFusion_Diagramming_DiagramLink_setEndPoint_1_Point.htm'>setEndPoint</a></p></td>
+<td><p>Sets the last control point of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32465' href='M_MindFusion_Diagramming_DiagramLink_setHeadBrush_1_void.htm'>setHeadBrush</a></p></td>
+<td><p>Sets a Brush that specifies how to paint the interior of the link's arrowhead <a id='32485' href='CC_T_MindFusion_Diagramming_ShapeNode_0.htm' title=''>ShapeNode</a>.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32466' href='M_MindFusion_Diagramming_DiagramLink_setHeadShape_1_Shape.htm'>setHeadShape</a></p></td>
+<td><p>Sets the shape to display at the end of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='14710' href='M_MindFusion_Diagramming_DiagramLink_setHeadShapeSize_1_Number.htm'>setHeadShapeSize</a></p></td>
+<td><p>Gets the size of the arrowhead shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4174' href='M_MindFusion_Diagramming_DiagramLink_setHeadStroke_1_Object.htm'>setHeadStroke</a></p></td>
+<td><p>Sets an object that specifies how to paint the outline of the link's arrowhead shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4175' href='M_MindFusion_Diagramming_DiagramLink_setHeadStrokeDashStyle_1_DashStyle.htm'>setHeadStrokeDashStyle</a></p></td>
+<td><p>Sets an object that specifies the effective line dash pattern of the outline of the link's arrowhead shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4176' href='M_MindFusion_Diagramming_DiagramLink_setHeadStrokeThickness_1_Number.htm'>setHeadStrokeThickness</a></p></td>
+<td><p>Sets a number that specifies the line thickness of the outline of the link's arrowhead shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32467' href='M_MindFusion_Diagramming_DiagramLink_setOrigin_1_DiagramNode.htm'>setOrigin</a></p></td>
+<td><p>Sets the origin node of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='29813' href='M_MindFusion_Diagramming_DiagramLink_setOriginAnchor_1_Number.htm'>setOriginAnchor</a></p></td>
+<td><p>Sets the anchor point to which a link is connected at its origin.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='53338' href='M_MindFusion_Diagramming_DiagramLink_setSegmentCount_1_Number.htm'>setSegmentCount</a></p></td>
+<td><p>Sets the number of segments that form the link's geometry.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32468' href='M_MindFusion_Diagramming_DiagramLink_setShape_1_LinkShape.htm'>setShape</a></p></td>
+<td><p>Sets the type of link segments and how they are positioned relatively to each other.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19086' href='M_MindFusion_Diagramming_DiagramLink_setStartPoint_1_Point.htm'>setStartPoint</a></p></td>
+<td><p>Sets the first control point of this link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='14713' href='M_MindFusion_Diagramming_DiagramLink_setText_1_String.htm'>setText</a></p></td>
+<td><p>Sets the text displayed over a link.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='15010' href='M_MindFusion_Diagramming_DiagramLink_setTextAlignment_1_LinkTextStyle.htm'>setTextAlignment</a></p></td>
+<td><p>Sets the link's text alignment.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='15995' href='M_MindFusion_Diagramming_DiagramLink_setTextStyle_1_LinkTextStyle.htm'>setTextStyle</a></p></td>
+<td><p>Sets the link's text placement and orientation.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32469' href='M_MindFusion_Diagramming_DiagramLink_startDrag_1_InteractionState.htm'>startDrag</a></p></td>
+<td><p><span class='repeatingLink'>DiagramItem.startDrag</span> override.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32470' href='M_MindFusion_Diagramming_DiagramLink_updateCanvasElements_0.htm'>updateCanvasElements</a></p></td>
+<td><p>Updates the elements on the HTML Canvas.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32471' href='M_MindFusion_Diagramming_DiagramLink_updateDrag_1_InteractionState.htm'>updateDrag</a></p></td>
+<td><p><span class='repeatingLink'>DiagramItem.updateDrag</span> override.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='35399' href='CC_M_MindFusion_Diagramming_DiagramLink_updateFromPoints_0_0.htm'>updateFromPoints</a></p></td>
+<td><p>Updates the link's internal state after the link's control points have been changed.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='4177' href='M_MindFusion_Diagramming_DiagramLink_With_1_void.htm'>With</a></p></td>
+<td><p>Returns a Builder object used to configure and create new <span class='repeatingLink'>DiagramLink</span> instances.</p></td>
+</tr>
+</table>
+</div>
+<h2><span id='SeeAlso' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SeeAlsoImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;See Also</span></h2><div id='SeeAlsoSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p><a id='32441' href='CC_T_MindFusion_Diagramming_DiagramLink_0.htm' title=''>DiagramLink Class</a><br/><a id='32253' href='CC_N_MindFusion_Diagramming_0.htm' title=''>MindFusion.Diagramming Namespace</a></p>
+</div>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

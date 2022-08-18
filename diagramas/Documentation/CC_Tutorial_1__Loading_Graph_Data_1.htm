@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='32413' />
+<title>Tutorial 1: Loading Graph Data</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Tutorial 1: Loading Graph Data</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p>This tutorial shows how to load graph data from a&#160;Json string&#160;and create diagram objects corresponding to the graph nodes and edges.</p><p>1. Create a text file called Tutorial1.txt and add the following Json string to it:</p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>XML</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>{"nodes":[<br/>&#160;&#160;&#160; {"id":0,"name":"start"},<br/>&#160;&#160;&#160; {"id":1,"name":"activity 1"},<br/>&#160;&#160;&#160; {"id":2,"name":"task 1"},<br/>&#160;&#160;&#160; {"id":3,"name":"task 2"},<br/>&#160;&#160;&#160; {"id":4,"name":"activity 2"},<br/>&#160;&#160;&#160; {"id":5,"name":"task 3"},<br/>&#160;&#160;&#160; {"id":6,"name":"task 4"},<br/>&#160;&#160;&#160; {"id":7,"name":"activity 3"},<br/>&#160;&#160;&#160; {"id":8,"name":"task 5"},<br/>&#160;&#160;&#160; {"id":9,"name":"task 6"},<br/>&#160;&#160;&#160; {"id":10,"name":"end"}<br/>],<br/>"links":[<br/>&#160;&#160;&#160; {"origin":0,"target":1},<br/>&#160;&#160;&#160; {"origin":1,"target":2},<br/>&#160;&#160;&#160; {"origin":1,"target":3},<br/>&#160;&#160;&#160; {"origin":2,"target":4},<br/>&#160;&#160;&#160; {"origin":3,"target":4},<br/>&#160;&#160;&#160; {"origin":4,"target":5},<br/>&#160;&#160;&#160; {"origin":4,"target":6},<br/>&#160;&#160;&#160; {"origin":5,"target":10},<br/>&#160;&#160;&#160; {"origin":6,"target":10},<br/>&#160;&#160;&#160; {"origin":0,"target":7},<br/>&#160;&#160;&#160; {"origin":7,"target":8},<br/>&#160;&#160;&#160; {"origin":8,"target":9},<br/>&#160;&#160;&#160; {"origin":2,"target":8},<br/>&#160;&#160;&#160; {"origin":9,"target":10}<br/>]}</p></td></tr></table></p><p>2. Create empty Tutorial1.html and Tutorial1.js files, and add DIV and&#160;CANVAS elements to the HTML page.</p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>HTML</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>&lt;!-- The Diagram component is bound to the canvas element below --&gt;<br/>&lt;div style="width:900px; height:500px; overflow:auto; border: 1px solid;"&gt;<br/><br/>&lt;canvas id="diagram" width="2100" height="2100"&gt;<br/>&#160;&#160;&#160; This page requires a browser that supports HTML 5 Canvas element.<br/>&lt;/canvas&gt;<br/><br/>&lt;/div&gt;</p></td></tr></table></p><p>3. Add script references to the JQuery, MindFusion.Common,&#160;MindFusion.Diagramming and Tutorial1 JavaScript files:</p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>HTML</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>&lt;script src="jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;script src="MindFusion.Common.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;script src="MindFusion.Diagramming.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;script src="Tutorial1.js" type="text/javascript"&gt;&lt;/script&gt;</p></td></tr></table></p><p>4. In Tutorial1.js, assign shorter names to the <a id='32377' href='CC_T_MindFusion_Diagramming_Diagram_0.htm' title=''>Diagram</a>, <a id='32485' href='CC_T_MindFusion_Diagramming_ShapeNode_0.htm' title=''>ShapeNode</a>, <a id='32441' href='CC_T_MindFusion_Diagramming_DiagramLink_0.htm' title=''>DiagramLink</a>, <a id='32603' href='T_MindFusion_Graphs_LayeredLayout.htm' title=''>LayeredLayout</a> and <a id='32547' href='T_MindFusion_Drawing_Rect.htm' title=''>Rect</a> classes.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var Diagram = MindFusion.Diagramming.Diagram;<br/>var DiagramLink = MindFusion.Diagramming.DiagramLink;<br/>var ShapeNode = MindFusion.Diagramming.ShapeNode;<br/><br/>var Rect = MindFusion.Drawing.Rect;<br/>var LayeredLayout = MindFusion.Graphs.LayeredLayout;<br/>var ArrayList = MindFusion.Collections.ArrayList;</p></td></tr></table></p><p>5. Add a&#160;document.ready handler that creates a <span class='repeatingLink'>Diagram</span> instance wrapping the HTML Canvas element:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var diagram;<br/><br/>$(document).ready(function ()<br/>{<br/>&#160;&#160;&#160; // create a Diagram component that wraps the "diagram" canvas<br/>&#160;&#160;&#160; diagram = Diagram.create($("#diagram")[0]);<br/>});</p></td></tr></table></p><p>6.&#160;Add the following code to the&#160;ready handler to create a network request&#160;that&#160;loads the Json&#160;file from the server:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>// pretend we are calling a web service<br/>$.get("Tutorial1.txt", onResponse);</p></td></tr></table></p><p>7. Add an onResponse function invoked when the response arrives:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>function onResponse(json)<br/>{<br/>&#160;&#160;&#160; if (json)<br/>&#160;&#160;&#160; {<br/>&#160;&#160;&#160; &#160;&#160;&#160; var graph = MindFusion.AbstractionLayer.fromJson(json);<br/>&#160;&#160;&#160; &#160;&#160;&#160; buildDiagram(graph);<br/>&#160;&#160;&#160; }<br/>}</p></td></tr></table></p><p>8. Add the buildDiagram function that creates diagram nodes and links for each object from the parsed Json graph:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>function buildDiagram(graph)<br/>{<br/>&#160;&#160;&#160; var nodeMap = [];<br/>&#160;&#160;&#160; var bounds = new Rect(0, 0, 18, 8);<br/><br/>&#160;&#160;&#160; // load node data<br/>&#160;&#160;&#160;&#160;var nodes = graph.nodes;<br/>&#160;&#160;&#160; ArrayList.forEach(nodes, function (node)<br/>&#160;&#160;&#160; {<br/>&#160;&#160;&#160; &#160;&#160;&#160; var diagramNode = diagram.getFactory().createShapeNode(bounds);<br/>&#160;&#160;&#160; &#160;&#160;&#160; nodeMap[node.id] = diagramNode;<br/>&#160;&#160;&#160; &#160;&#160;&#160; diagramNode.setText(node.name);<br/>&#160;&#160;&#160; &#160;&#160;&#160; diagramNode.setBrush("#e0e9e9");<br/>&#160;&#160;&#160; });<br/><br/>&#160;&#160;&#160; // load link data<br/>&#160;&#160;&#160; var links = graph.links;<br/>&#160;&#160;&#160; ArrayList.forEach(links, function (link)<br/>&#160;&#160;&#160; {<br/>&#160;&#160;&#160; &#160;&#160;&#160; var link = diagram.getFactory().createDiagramLink(<br/>&#160;&#160;&#160; &#160;&#160;&#160; nodeMap[link.origin],<br/>&#160;&#160;&#160; &#160;&#160;&#160; nodeMap[link.target]);<br/>&#160;&#160;&#160; });<br/>}</p></td></tr></table></p><p>9. Finally, apply <span class='repeatingLink'>LayeredLayout</span> to arrange the diagram automatically:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>// arrange the graph<br/>var layout = new LayeredLayout();<br/>layout.nodeDistance = 10;<br/>layout.layerDistance = 10;<br/>diagram.arrange(layout);</p></td></tr></table></p><p>10.&#160;Publish jquery.js, MindFusion.Diagramming.js and&#160;the tutorial files using web server of your choice. Now you should see this if you open Tutorial1.html in a web browser:<img src='jsdiag_tutorial1.png' title='' hspace='0' vspace='0' align='left' width='331' height='404'/></p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='34128' />
+<title>Customizing Link Appearance</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Customizing Link Appearance</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p><a id='32441' href='CC_T_MindFusion_Diagramming_DiagramLink_0.htm' title=''>DiagramLinks</a>-s&#160;consist of&#160;series of straight or Bezier segments and arrowhead shapes.&#160;The link and arrowhead shapes, and also color attributes&#160;and text can be customized as detailed below:</p><h2>Customizing the shape of a link</h2><p>Your link can be straight or curved and can have one or more segments.&#160; Call <a id='32468' href='M_MindFusion_Diagramming_DiagramLink_setShape_1_LinkShape.htm' title=''>DiagramLink.setShape</a> to change the shape. It takes as an argument one of the <a id='21936' href='T_MindFusion_Diagramming_LinkShape.htm' title=''>LinkShape</a> enumeration values:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>myLink.setShape(LinkShape.Cascading);</p></td></tr></table></p><p>The link can further be customized by changing its control points - they specify the position of the link. The number of control points per segment depends on the&#160;link's <a id='32456' href='M_MindFusion_Diagramming_DiagramLink_getShape_0.htm' title=''>Shape</a>: <span class='repeatingLink'>Bezier</span> links&#160;have&#160;four control points per segment. Each straight segment has two control points. Adjacent segments share a control point. </p><p>The following code sets three control points of a polyline link which has two segments:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var Point = MindFusion.Drawing.Point;<br/>myLink.setControlPoints([new Point(10, 10), new Point(30, 30), new Point(30, 50)]);<br/>myLink.updateFromPoints();</p></td></tr></table></p><p><table class='note' cellspacing='0'><tr><th><img src='note.png' title='Note' align='absmiddle' />&#160;Note</th></tr><tr><td><p>Always call DiagramLink.<a id='35399' href='CC_M_MindFusion_Diagramming_DiagramLink_updateFromPoints_0_0.htm' title=''>updateFromPoints</a>() after you have changed the control points of a link.</p></td></tr></table></p><h2>Rounded Links</h2>Links comprising straight segments, that is, ones whose <a id='32468' href='M_MindFusion_Diagramming_DiagramLink_setShape_1_LinkShape.htm' title=''>Shape</a> is set to <a id='21936' href='T_MindFusion_Diagramming_LinkShape.htm' title=''>Polyline</a> or <span class='repeatingLink'>Cascading</span>, can draw arcs&#160;as joinis between their adjacent segments. To enable that feature, set <a id='16861' href='M_MindFusion_Diagramming_Diagram_setRoundedLinks_1_Boolean.htm' title=''>RoundedLinks</a> to <b>true</b>. Use <a id='32279' href='M_MindFusion_Diagramming_Diagram_setRoundedLinksRadius_1_Number.htm' title=''>RoundedLinksRadius</a> to&#160;specify the radius of the joining arcs.<h2>Link Crossings</h2>Intersection points where links cross their paths can be rendered as arcs or cuts, as specified via <a id='16252' href='M_MindFusion_Diagramming_Diagram_setLinkCrossings_1_LinkCrossings.htm' title=''>LinkCrossings</a>. It depends on the Z-order, which links jump over the others, or which links appear cut by the others. If <span class='repeatingLink'>LinkCrossings</span> is set to <a id='31580' href='T_MindFusion_Diagramming_LinkCrossings_0.htm' title=''>Arcs</a>, links with higher <a id='32794' href='M_MindFusion_Diagramming_DiagramItem_setZIndex_1_Number.htm' title=''>ZIndex</a> jump over those with lower <span class='repeatingLink'>ZIndex</span>. If set to <span class='repeatingLink'>Cut</span>, links at lower Z position are cut by links at higher Z. Radius of arcs and breaks can be set through the <a id='15406' href='M_MindFusion_Diagramming_Diagram_setCrossingRadius_1_void.htm' title=''>CrossingRadius</a> property.<h2>Customizing the arrowheads</h2><p>Each link can start and end with a shape.&#160;The shape at the start is called BaseShape, the shape at the end is called HeadShape. The methods that set the shapes are&#160;<a id='32462' href='M_MindFusion_Diagramming_DiagramLink_setBaseShape_1_Shape.htm' title=''>setBaseShape</a> and <a id='32466' href='M_MindFusion_Diagramming_DiagramLink_setHeadShape_1_Shape.htm' title=''>setHeadShape.</a> They take as argument either the <a id='32440' href='CC_T_MindFusion_Diagramming_Shape_0.htm' title=''>Shape</a> to set or a string that identifies it:&#160;</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>myLink.setHeadShape("BowArrow");</p></td></tr></table></p><p></p><p></p><p>The Shape identifiers&#160;are also exposed&#160;as static members of the <a id='32438' href='CC_T_MindFusion_Diagramming_Shapes_0.htm' title=''>Shapes</a> class.</p><h2>Specifying&#160;colors</h2><p>Link lines are rendered according to <a id='21956' href='M_MindFusion_Diagramming_DiagramItem_setStroke_1_String.htm' title=''>Stroke</a>, <a id='21957' href='M_MindFusion_Diagramming_DiagramItem_setStrokeThickness_1_Number.htm' title=''>StrokeThickness</a> and <a id='56617' href='M_MindFusion_Diagramming_DiagramItem_setStrokeDashStyle_1_DashStyle.htm' title=''>StrokeDashStyle</a> attributes. The shapes at the head and base are filled with HeadBrush and BaseBrush. To access them use <a id='32465' href='M_MindFusion_Diagramming_DiagramLink_setHeadBrush_1_void.htm' title=''>setHeadBrush</a> and <a id='32461' href='M_MindFusion_Diagramming_DiagramLink_setBaseBrush_1_void.htm' title=''>setBaseBrush</a> as shown below:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>//paints the link head with red brush<br/>myLink.setHeadBrush("Red");</p></td></tr></table></p><h2>Setting text</h2><p>Use <a id='32348' href='M_MindFusion_Diagramming_DiagramItem_setText_1_String.htm' title=''>setText</a> to set a label of your link, <a id='32798' href='M_MindFusion_Diagramming_DiagramItem_setFont_1_Font.htm' title=''>setFont</a> specifies the font. Here is an example how to do this:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>myLink.setText("myLabel");</p><p>var Font = MindFusion.Drawing.Font;</p><p>//the two boolean&#160;arguments specify whether the font is bold and italic<br/>myLink.setFont(new Font("sans-serif", 5, true, false));</p></td></tr></table></p>The font size is&#160;specified in the&#160;diagram's current&#160;measure unit, which is millimeter by default.
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

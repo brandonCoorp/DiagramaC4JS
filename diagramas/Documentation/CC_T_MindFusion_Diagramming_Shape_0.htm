@@ -1,0 +1,114 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='32440' />
+<title>MindFusion.Diagramming.Shape Class</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style=''><span class='title'>Shape Class</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE; padding: 2pt 5pt 4pt 12pt;'><span><a id='' href='#Remarks'>Remarks</a> <a id='' href='#SeeAlso'>See Also</a> </span></td>
+</tr>
+<tr>
+<td style='height: 19px; border-top: solid 1px #FFFFFF; border-bottom: solid 1px #C8CDDE; padding: 0pt 0pt 0pt 12pt;'>
+<span style='cursor: default' onkeypress='ExpandCollapseAll_CheckKey(toggleAllImage);' onclick='ExpandCollapseAll(toggleAllImage);'>
+<img src='collapsesmall.png' title='CollapseAll image' id='toggleAllImage' />
+<label style='display: none;' id='collapseAllLabel' for='toggleAllImage'>
+Collapse All
+</label>
+<label style='display: none;' id='expandAllLabel' for='toggleAllImage'>
+Expand All
+</label>
+&#160;</span>
+<span id='languageFilterToolTip' style='cursor: default;' onmouseover='languageFilterImage.src=dropDownHoverImage.src;' onmouseout='languageFilterImage.src=dropDownImage.src;' >
+<img src='arrow.png' title='DropDown image' id='languageFilterImage' />
+<label id='showAllLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: All
+</label>
+<label id='multipleLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: Multiple
+</label>
+<label id='noneLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: None
+</label>
+<label id='csLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: C#
+</label>
+<label id='vbLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: Visual Basic
+</label>
+<label id='javaLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: Java
+</label>
+<label id='jsLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: JavaScript
+</label>
+<label id='xamlLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: XAML
+</label>
+</span>
+</td>
+</tr>
+</table>
+<div id='languageSpan'>
+<input id='csCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='csCheckbox'>C#</label> <br />
+<input id='vbLangCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='vbLangCheckbox'>Visual Basic</label> <br />
+<input id='javaCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='javaCheckbox'>Java</label> <br />
+<input id='jsCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='jsCheckbox'>JavaScript</label> <br />
+<input id='xamlCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='xamlCheckbox'>XAML</label> <br />
+</div>
+</div>
+<div id='nstext'>
+<p>An instance of this class represents a shape defined through a series of arc, line and Bezier segments. The segments can be a part of the shape outline, in which case they define the part of the shape is filled, used for hit-testing and for aligning links to the node edges. Segments can also be added as decoration elements, in which case they only affect the appearance of a <a id='32485' href='CC_T_MindFusion_Diagramming_ShapeNode_0.htm' title=''>ShapeNode</a>.</p>
+<p><b>Namespace:</b> <a id='32253' href='CC_N_MindFusion_Diagramming_0.htm' title=''>MindFusion.Diagramming</a><br/><b><span>File</span>:</b> Shape.js</p>
+<h2><span id='Syntax' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SyntaxImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Syntax</span></h2><div id='SyntaxSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>// class<br/>Shape.prototype = {}</p></td></tr></table></div>
+<h2><span id='Remarks' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='RemarksImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Remarks</span></h2><div id='RemarksSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p>The <span class='selfLink'>Shape</span> class can also be used as a component in <a id='32258' href='Composite_Nodes.htm' title=''>composite nodes</a>. When its <b>isOutline</b> attribute is set, the shape will control <a id='57993' href='T_MindFusion_Diagramming_CompositeNode_0.htm' title=''>CompositeNode</a>'s geometry, defining hit test and clip area, and link alignment points&#160;along node's border. If <b>isOutline</b> is disabled, the shape will serve mostly as a decorative element.&#160;The code below shows a sample&#160;fragment&#160;specifying shape component in template:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>{<br/>&#160;&#160;&#160; component: "Shape",<br/>&#160;&#160;&#160; id: "Cloud",<br/>&#160;&#160;&#160; autoProperty: true,<br/>&#160;&#160;&#160; name: "OutlineShape",<br/>&#160;&#160;&#160; pen: "gray",<br/>&#160;&#160;&#160; brush: "Transparent",<br/>&#160;&#160;&#160; isOutline: true<br/>},</p></td></tr></table></p>
+</div>
+<h2><span id='Example' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='ExampleImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Example</span></h2><div id='ExampleSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p>Custom shapes can be defined using SVG Path syntax. The following code creates custom shape geoometry and assigns it to a <a id='32485' href='CC_T_MindFusion_Diagramming_ShapeNode_0.htm' title=''>ShapeNode</a>:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var shape = new MindFusion.Diagramming.Shape({<br/>&#160;&#160; id: "DoubleEllipse",<br/>&#160;&#160; outline: "M100,50 A50,50,0,1,1,0,50 A50,50,0,1,1,100,50",<br/>&#160;&#160; decoration: "M98,50 A48,48,0,1,1,2,50 A48,48,0,1,1,98,50",<br/>&#160;&#160; fillMode: "nonzero"});</p><p>node.setShape(shape);</p></td></tr></table></p><p></p>
+</div>
+<h2><span id='InheritanceHierarchy' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='InheritanceHierarchyImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Inheritance Hierarchy</span></h2><div id='InheritanceHierarchySection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<a id='96753' href='T_MindFusion_Drawing_ComponentBase.htm' title=''>MindFusion.Drawing.ComponentBase</a><br/>&#160; <span class='selfLink'>MindFusion.Diagramming.Shape</span></p></div>
+<h2><span id='SeeAlso' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SeeAlsoImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;See Also</span></h2><div id='SeeAlsoSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p><a id='32788' href='CC_T_MindFusion_Diagramming_Shape_Members_0.htm' title=''>Shape Members</a><br/><a id='32253' href='CC_N_MindFusion_Diagramming_0.htm' title=''>MindFusion.Diagramming Namespace</a></p>
+</div>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

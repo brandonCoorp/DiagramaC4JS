@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='28021' />
+<title>Creating and Deleting Items</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Creating and Deleting Items</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p>New items can be added programmatically to the diagram by calling the constructors of the item's class, such as <a id='32487' href='C_MindFusion_Diagramming_ShapeNode_ShapeNode_1_Diagram.htm' title=''>ShapeNode</a> or <a id='32443' href='C_MindFusion_Diagramming_DiagramLink_DiagramLink_3_Diagram_DiagramNode_DiagramNode.htm' title=''>DiagramLink</a>, and adding the new instance via the <a id='32382' href='M_MindFusion_Diagramming_Diagram_addItem_1_DiagramItem.htm' title=''>addItem</a> method. A shortcut to creating new items is provided by the methods of the <a id='32353' href='CC_T_MindFusion_Diagramming_Factory_0.htm' title=''>Factory</a> class. An instance of that class is returned by the <a id='32394' href='M_MindFusion_Diagramming_Diagram_getFactory_0.htm' title=''>getFactory</a> method of <a id='32377' href='CC_T_MindFusion_Diagramming_Diagram_0.htm' title=''>Diagram</a>. Factory methods such as <a id='32358' href='M_MindFusion_Diagramming_Factory_createShapeNode_5_Rect_Number_Number_Number_Number.htm' title=''>createShapeNode</a> and <a id='32357' href='M_MindFusion_Diagramming_Factory_createDiagramLink_2_Point_Point.htm' title=''>createDiagramLink</a> accept respectively node position or link's origin and destination arguments, create an instance of the class and add it to the diagram. The <span class='repeatingLink'>Factory</span> class can create instances of JsDiagram predefined item types, while addItem can be used to add instances of custom types as well.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var ShapeNode = MindFusion.Diagramming.ShapeNode;<br/>var Rect = MindFusion.Drawing.Rect;<br/><br/>function initDiagram()<br/>{<br/>&#160;&#160;&#160; var diagram = $find("diagram");<br/><br/>&#160;&#160;&#160; // create the start node<br/>&#160;&#160;&#160; var startNode = diagram.getFactory().createShapeNode(10, 10, 30, 20);<br/>&#160;&#160;&#160; startNode.setText("start");<br/><br/>&#160;&#160;&#160; // create the end node<br/>&#160;&#160;&#160; var endNode = new ShapeNode(diagram);<br/>&#160;&#160;&#160; endNode.setBounds(new Rect(10, 60, 30, 20));<br/>&#160;&#160;&#160; endNode.setText("end");<br/>&#160;&#160;&#160; diagram.addItem(endNode);<br/><br/>&#160;&#160;&#160; // connect the nodes<br/>&#160;&#160;&#160; diagram.getFactory().createDiagramLink(startNode, endNode);<br/>}</p></td></tr></table></p><p>If an existing item should be removed from the diagram, call the <a id='32421' href='M_MindFusion_Diagramming_Diagram_removeItem_1_DiagramItem.htm' title=''>removeItem</a> method. If a node is removed, any links connected to the node are removed too.</p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

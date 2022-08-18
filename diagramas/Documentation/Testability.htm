@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='30094' />
+<title>Testability</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Testability</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p>User interaction can now be tested automatically in several ways outlined below.</p><ul><li>Create a <a id='29959' href='T_MindFusion_Diagramming_MouseInputDispatcher.htm' title=''>MouseInputDispatcher</a> instance and call its methods <table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>onMouseDown: function (position, button)<br/>onMouseMove: function (position)<br/>onMouseUp: function (position, button)</p></td></tr></table>where position is a&#160;<a id='32538' href='T_MindFusion_Drawing_Point.htm' title=''>Point</a> instance specifying logical coordinates in the diagram (in current measure unit, not scaled by zoom factor). The results of called mouse methods will depend on diagram's current <a id='37962' href='M_MindFusion_Diagramming_Diagram_getBehavior_0.htm' title=''>Behavior</a>, e.g. you could assert that a sequence of down, move andup events creates a <a id='32485' href='CC_T_MindFusion_Diagramming_ShapeNode_0.htm' title=''>ShapeNode</a> when <a id='37967' href='M_MindFusion_Diagramming_Diagram_setBehavior_1_Behavior.htm' title=''>Behavior</a> is set to <a id='37983' href='CC_T_MindFusion_Diagramming_Behavior_0.htm' title=''>DrawShapes</a>.</li><li>Create an instance of controller class and call its <a id='29987' href='M_MindFusion_Diagramming_SinglePointerController_start_1_Point.htm' title=''>start</a>, <a id='29985' href='M_MindFusion_Diagramming_SinglePointerController_move_1_Point.htm' title=''>move</a> and <a id='29983' href='M_MindFusion_Diagramming_SinglePointerController_commit_1_Point.htm' title=''>commit</a> methods. This would not depend on the value of diagram's <span class='repeatingLink'>Behavior</span>, but could be still affected by other behavioral properties such as <a id='2752' href='M_MindFusion_Diagramming_Diagram_setAllowSelfLoops_1_Boolean.htm' title=''>AllowSelfLoops</a> and <a id='2651' href='M_MindFusion_Diagramming_Diagram_setAllowUnconnectedLinks_1_Boolean.htm' title=''>AllowUnconnectedLinks</a>.</li><li>Check assertions after replaying a recording on a saved diagram, using <a id='29795' href='M_MindFusion_Diagramming_Diagram_record_0.htm' title=''>record</a>, <a id='29805' href='M_MindFusion_Diagramming_Diagram_stopRecording_0.htm' title=''>stopRecording</a> and <a id='29803' href='M_MindFusion_Diagramming_Diagram_replay_3_Array_Boolean_String.htm' title=''>replay</a> methods.</li></ul>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

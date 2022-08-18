@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='30085' />
+<title>Getting Started</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Getting Started</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p><h3>HTML elements</h3><p>The <a id='32377' href='CC_T_MindFusion_Diagramming_Diagram_0.htm' title=''>Diagram</a> control relies on the HTML5 Canvas element to render graphics on web page. If you need to display large diagrams, place the Canvas inside a Div with overflow enabled to&#160;implement scrolling.</p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>HTML</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>&lt;div style="width: 800px; height: 600px; overflow: auto;"&gt;<br/>&#160;&#160;&#160; &lt;canvas id="diagram" width="2100" height="2100"&gt;<br/>&#160;&#160;&#160; &#160;&#160;&#160; This page requires a browser that supports HTML5 Canvas element.<br/>&#160;&#160;&#160; &lt;/canvas&gt;<br/>&lt;/div&gt;</p></td></tr></table></p><p>The MindFusion.Diagramming toolkit includes additional user interface&#160;controls such as <a id='29890' href='T_MindFusion_Diagramming_Ruler_0.htm' title=''>Ruler</a>, <a id='32266' href='T_MindFusion_Diagramming_Overview.htm' title=''>Overview</a>, <a id='32519' href='T_MindFusion_Diagramming_NodeListView.htm' title=''>NodeListView</a> and <a id='53350' href='T_MindFusion_Controls_ZoomControl.htm' title=''>ZoomControl</a>. If you'd like to use any of them, you will need to add Div and/or Canvas element for each one; for an example, see the <i>Controls</i> sample project.</p><h3>Load diagram scripts</h3><p>By default MindFusion.Diagramming.js does not require any&#160;third party dependencies,&#160;but&#160;needs the&#160;shared MindFusion.Common.js library to be loaded too:</p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>HTML</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>&lt;script src="MindFusion.Common.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;script src="MindFusion.Diagramming.js" type="text/javascript"&gt;&lt;/script&gt;</p></td></tr></table></p><p>If you&#160;need support for older browsers (pre- IE11), you can enable&#160;JQuery mode that&#160;relies on&#160;JQuery for browser abstraction:</p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>HTML</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>&lt;script type="text/javascript"&gt;<br/>&#160;&#160;&#160; MindFusionImpl = "JQuery";<br/>&lt;/script&gt;&lt;script src="common/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;script src="MindFusion.Common.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;script src="MindFusion.Diagramming.js" type="text/javascript"&gt;&lt;/script&gt;</p></td></tr></table></p><h3>Set up code completion</h3><p>MindFusion.Diagramming-vsdoc.js&#160;contains code completion&#160;information in&#160;IntelliSense format.&#160;Add this to the top of your script file to&#160;enable code completion in Visual Studio and other code editors that support IntelliSense:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>/// &lt;reference path="MindFusion.Diagramming-vsdoc.js" /&gt; </p></td></tr></table></p><p>Then the editor should be able to show&#160;member lists&#160;and hints for all variables whose type can be inferred automatically, as&#160;seen in this image:</p><img src='jsdiag_intellisense.png' title='' hspace='0' vspace='0' align='' width='549' height='142'/><h3>Create Diagram instance</h3>Create a <a id='32377' href='CC_T_MindFusion_Diagramming_Diagram_0.htm' title=''>Diagram</a> JavaScript object by calling the static <a id='51475' href='M_MindFusion_Diagramming_Diagram_createDiagram_1_Object.htm' title=''>Diagram.create</a> method, passing it the Canvas element as argument:<p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>// shortcut to the Diagram class<br/>var Diagram = MindFusion.Diagramming.Diagram;<br/><br/>// create a Diagram component that wraps the "diagram" canvas<br/>var diagram = Diagram.create($("#diagram")[0]);</p></td></tr></table></p><h3>Add items from code</h3><p>You can create diagram items programmatically by calling methods of the diagram's <a id='32394' href='M_MindFusion_Diagramming_Diagram_getFactory_0.htm' title=''>Factory</a> object.&#160;Alternatively, create an instance of any class derived from <a id='32324' href='CC_T_MindFusion_Diagramming_DiagramItem_0.htm' title=''>DiagramItem</a> by calling its constructor, and&#160;call <a id='32382' href='M_MindFusion_Diagramming_Diagram_addItem_1_DiagramItem.htm' title=''>addItem</a> to add it to the diagram:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var ShapeNode = MindFusion.Diagramming.ShapeNode;<br/>var Rect = MindFusion.Drawing.Rect;<br/><br/>var node1 = diagram.getFactory().createShapeNode(0, 0, 10, 10);<br/><br/>var node2 = new ShapeNode(diagram);<br/>node2.setBounds(new Rect(20, 0, 10, 10));<br/>diagram.addItem(node2);</p></td></tr></table></p><h3>Draw items interactively</h3><p>The diagram can respond&#160;in various way to user input depending on the value of its <a id='37967' href='M_MindFusion_Diagramming_Diagram_setBehavior_1_Behavior.htm' title=''>Behavior</a> property. By defaults it creates a&#160;<a id='32485' href='CC_T_MindFusion_Diagramming_ShapeNode_0.htm' title=''>ShapeNode</a> when the user starts drawing from unoccupied location, or a <a id='32441' href='CC_T_MindFusion_Diagramming_DiagramLink_0.htm' title=''>DiagramLink</a> when the mouse pointer is over a node. See the <a id='37983' href='CC_T_MindFusion_Diagramming_Behavior_0.htm' title=''>Behavior</a> enumeration for other supported modes.</p><h3>AMD module</h3><p>The diagramming.js script can also be loaded as an AMD module. If it detects an AMD loader during startup, it will list common.js as its dependency, so it is enough to require only diagramming.js as application's direct dependency:</p><p><table class='syntax' codeLanguage='CSharp' cellspacing='0'><tr><th><span style='float: left;'>C#</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>MindFusionImpl = "StandAlone";<br/><br/>requirejs(["MindFusion.Diagramming"],<br/>&#160;&#160;&#160; function(MindFusion)<br/>&#160;&#160;&#160; {<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; // create a Diagram component that wraps the "diagram" canvas<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; var Diagram = MindFusion.Diagramming.Diagram;<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; var element = document.getElementById("diagram");<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; var diagram = Diagram.create(element);<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; var node = diagram.factory.createShapeNode(10, 10, 40, 30);<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; node.setText("Hello, world!");<br/>&#160;&#160;&#160; }<br/>);</p></td></tr></table></p><h3>Further reading</h3><p>Browse the topics under <a id='29709' href='CC_Programming_Interface_Overview_15.htm' title=''>Programming Interface Overview</a> for conceptual information. See the <a id='32300' href='CC_Tutorials_13.htm' title=''>tutorial topics</a> and check the sample scripts&#160;provided&#160;with JsDiagram.zip distribution for sample source code. For integrating the diagram with popular front-end libraries and frameworks, see <a id='94821' href='React.htm' title=''>React</a>, <a id='94822' href='Vue_js.htm' title=''>Vue.js</a> and <a id='94823' href='Angular.htm' title=''>Angular</a> topics.</p><p></p></p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

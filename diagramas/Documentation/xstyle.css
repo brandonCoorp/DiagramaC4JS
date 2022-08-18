@@ -1,0 +1,554 @@
+
+/* General style */
+body
+{
+	font: 13px 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	color: #2A2A2A;
+	line-height: 1.35;
+}
+
+img
+{
+	border-collapse: collapse;
+	border-width: 0;
+}
+
+/* General table style: member lists, syntax, notes, regular tables */
+table
+{
+	border-spacing: 0px;
+	/*border-collapse: collapse;*/ /*causes problems in IE when hiding rows; hardcode cellspacing in table tags*/
+	border-top: 1px solid #cfcfcf;
+	border-left: 1px solid #cfcfcf;
+	font-size: 100%;
+	margin-bottom: 10px;
+	margin-top: 0;
+	width: 100%;
+}
+
+table th
+{
+	background: #f0f0f0;
+	border-bottom: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	color: #707070;
+	font-size: 100%;
+	font-weight: bold;
+	text-align: left;
+	padding: 8px;
+}
+
+table td
+{
+	background: #ffffff;
+	border-bottom: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	font-size: 100%;
+	line-height: 1.35;
+	vertical-align: top;
+	padding: 8px;
+}
+
+table#tmain
+{
+	border-width: 0;
+}
+
+table#tmain tr
+{
+	padding: 0;
+}
+
+table#tmain td
+{
+	padding: 0;
+	border-width: 0;
+}
+
+/* Unordered list style */
+ul
+{
+	margin: 0 0 8px 30px;
+	padding: 0;
+}
+
+ol
+{
+	margin: 0 0 8px 30px;
+	padding: 0;
+}
+
+/* List item style */
+li
+{
+}
+
+.indent1
+{
+	margin-left: 12px;
+}
+
+.indent2
+{
+	margin-left: 24px;
+}
+
+.indent3
+{
+	margin-left: 36px;
+}
+
+/* Parameter list name style */
+dt
+{
+	margin-bottom: 2px;
+	margin-top: 0;
+}
+
+/* Parameter list description style */
+dd
+{
+	margin-bottom: 6px;
+	margin-left: 0;
+}
+
+/* Parameter list style */
+dl
+{
+	margin-bottom: 0;
+	margin-top: 4px;
+}
+
+/* Member list table style */
+table.memberlist
+{
+}
+
+table.memberlist th
+{
+	color: #707070;
+}
+
+table.memberlist td
+{
+	padding-bottom: 0;
+}
+
+/* Syntax table style*/
+table.syntax
+{
+}
+
+table.syntax th
+{
+}
+
+table.syntax td
+{
+	color: #000066;
+	font-family: Consolas, Monospace, Courier New, Courier;
+	font-size: 105%;
+	padding-bottom: 0;
+}
+
+/* Note table style */
+table.note
+{
+}
+
+table.note th
+{
+}
+
+table.note td
+{
+	padding-bottom: 0;
+}
+
+table.common
+{
+}
+
+table.common th
+{
+	padding-bottom: 0;
+}
+
+table.common td
+{
+	padding-bottom: 0;
+}
+
+/* Hyperlink style */
+a
+{
+	color: #3366cc;/*#00709f;*/
+	/*text-decoration: none;*/
+}
+
+a:hover
+{
+	color: #3390b1;/*#0f3390;*/
+}
+
+a:followed
+{
+	color: #03697a;/*#3366cc;*/
+}
+
+a:visited
+{
+	/*color: #03697a;*/
+}
+
+.adisable
+{
+	color: #999999;
+}
+
+/* Title */
+.title
+{
+	display: block;
+	font-size: 175%;
+	font-family: 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	margin: 0;
+	padding: 0pt 5pt 2pt 12pt;
+}
+
+/* Supertitle style */
+.gtitle
+{
+	display: block;
+	font-size: 90%;
+	font-weight: normal;
+	margin: 0;
+	padding: 2pt 5pt 2pt 12pt;
+}
+
+/* Headings */
+h1
+{
+	font-size: 260%;
+	font-weight: normal;
+	line-height: 1.35;
+	margin: 5px 0px;
+	color: #000000;
+}
+
+h2
+{
+	font-size: 200%;
+	font-weight: normal;
+	font-family: 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	line-height: 1.35;
+	margin: 0px;
+	padding: 5px 0px;
+	color: #000000;
+}
+
+h3
+{
+	font-size: 140%;
+	font-weight: bold;
+	line-height: 1.35;
+	margin: 0px;
+	padding: 2px 0px;
+}
+
+h4
+{
+	font-size: 120%;
+	font-weight: normal;
+	font-family: 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	line-height: 1.35;
+	margin: 0px;
+}
+
+p
+{
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+/* Header and footer styles */
+div#nsbanner
+{
+	left: 0;
+	padding: 0;
+	position: relative;
+	right: 0;
+}
+
+div#nsfooter
+{
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	position: relative;
+	right: 0;
+}
+
+table.bannerparthead
+{
+	border-collapse: separate;
+	border-width: 0;
+	border-spacing: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 0;
+}
+
+table.bannerparthead td
+{
+	background: #f0f0f0;
+	border-collapse: collapse;
+	border-width: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+table.footer
+{
+	border-width: 0;
+	bottom: 25px;
+	position: relative;
+	height: 20px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	top: 0;
+}
+
+table.footer td
+{
+	background: #f0f0f0;
+	border: none;
+	border-top: 1px solid #cfcfcf;
+	padding: 0;
+	text-align: right;
+	vertical-align: middle;
+}
+
+div#nstext
+{
+	padding: 12px 20px 12px 20px;
+	overflow: auto;
+}
+
+/* Copyright style */
+.copyright
+{
+	font-size: 90%;
+	padding-right: 8px;
+}
+
+/* Parameter name style */
+.parameter
+{
+	font-style: italic;
+}
+
+/* Repeating link in a paragraph. */
+.repeatingLink
+{
+	font-weight: bold;
+}
+
+/* Self link. */
+.selfLink
+{
+	font-weight: bold;
+}
+
+/* Link pointing outside of the configuration. */
+.outsideLink
+{
+	font-weight: bold;
+}
+
+/* Defines the userData cache persistence mechanism. */
+.userDataStyle
+{
+	behavior: url(#default#userData);
+}
+
+/* Formats the Language filter drop-down image. */
+img#languageFilterImage
+{
+	border: 0;
+	margin-left: 0;
+	vertical-align: middle;
+}
+
+/* Formats the Copy code image. */
+img#copyCodeImage
+{
+	border: 0;
+	margin-left: 0;
+	vertical-align: middle;
+}
+
+/* Formats the Members Options filter drop-down image. */
+img#membersOptionsFilterImage
+{
+	border: 0;
+	margin-left: 0;
+	vertical-align: middle;
+}
+
+/* Formats the Collapse All/Expand All images. */
+img#toggleAllImage
+{
+	margin-left: 0;
+	vertical-align: middle;
+}
+
+#languageSpan
+{
+	background: #f0f0f0;
+	border: solid 1px #cfcfcf;
+	padding: 4px;
+	position: absolute;
+	visibility: hidden;
+}
+
+#membersOptionsSpan
+{
+	background: #f0f0f0;
+	border: solid 1px #cfcfcf;
+	padding: 4px;
+	position: absolute;
+	visibility: hidden;
+}
+
+.hiddenImage
+{
+	border-width: 0;
+	display: none;
+	height: 0;
+	width: 0;
+}
+
+.copyCode
+{
+    font-size: 90%;
+    font-weight: normal;
+    cursor: pointer;
+    float: right;
+    text-align: right;
+}
+
+/* Code styles */
+.codeString
+{
+    color: #a31515;
+}
+
+.codeComment
+{
+	color: #008000;
+}
+
+.codeNumber
+{
+	color: #800000;
+}
+
+.codeKeyword
+{
+	color: #0000ff;
+}
+
+.codeXamlDelimiter
+{
+	color: #0000ff;
+}
+
+.codeXamlTag
+{
+	color: #a31515;
+}
+
+.codeXamlAttributeName
+{
+	color: #ff0000;
+}
+
+.codeXamlAttributeValue
+{
+	color: #0000ff;
+}
+
+.codeAspxInlineCode
+{
+	background-color: #ffff4c;
+	color: #000000;
+}
+
+/* Online help styles */
+body#headingBody
+{
+	padding: 0;
+	margin: 0;
+}
+
+div#headingMain
+{
+	border: 1px solid #9e9e9e;
+	border-bottom-width: 2px;
+	padding: 4px;
+	background-color: #f0f0f0;
+}
+
+div#headingMain form
+{
+	padding: 0;
+	margin: 0;
+}
+
+div#headingMain img
+{
+	vertical-align: -3px;
+}
+
+input#searchFor
+{
+	border: 1px solid #9e9e9e;
+	font-weight: bold;
+	color: #6b6b6b;
+	margin: 0;
+	margin-top: 5px;
+}
+
+table#heading
+{
+	margin: 0;
+	border-width: 0;
+}
+
+table#heading td
+{
+	padding: 0;
+	border-width: 0;
+	background-color: transparent;
+}
+
+.headingTitle
+{
+	color: #6b6b6b;
+	display: block;
+	font-size: 125%;
+	font-weight: bold;
+}
+
+.button
+{
+	cursor: pointer;
+	padding: 2px 2px 2px 1px;
+}

@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='90775' />
+<title>MindFusion.Graphs.FlowchartLayout Methods</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>FlowchartLayout Methods</span></td>
+</tr>
+<tr>
+<td style='height: 19px; border-top: solid 1px #FFFFFF; border-bottom: solid 1px #C8CDDE; padding: 0pt 0pt 0pt 12pt;'>
+<span style='cursor: default' onkeypress='ExpandCollapseAll_CheckKey(toggleAllImage);' onclick='ExpandCollapseAll(toggleAllImage);'>
+<img src='collapsesmall.png' title='CollapseAll image' id='toggleAllImage' />
+<label style='display: none;' id='collapseAllLabel' for='toggleAllImage'>
+Collapse All
+</label>
+<label style='display: none;' id='expandAllLabel' for='toggleAllImage'>
+Expand All
+</label>
+&#160;</span>
+<span id='membersOptionsFilterToolTip' style='cursor:default;' onmouseover='membersOptionsFilterImage.src=dropDownHoverImage.src;' onmouseout='membersOptionsFilterImage.src=dropDownImage.src;'>
+<img src='arrow.png' title='DropDown image' id='membersOptionsFilterImage' /></img>
+<label id='showAllMembersLabel' for='membersOptionsFilterImage' style='display: inherit;'>
+Members Options: Show All
+</label>
+<label id='filteredMembersLabel' for='membersOptionsFilterImage' style='display: none;'>
+Members Options: Filtered
+</label>
+</span>
+</td>
+</tr>
+</table>
+<div id='membersOptionsSpan'>
+<input id='inheritedCheckbox' type='checkbox' name='membersOptionsFilter' onclick='SetMembersOptions(this)' />
+<label for='inheritedCheckbox'>
+Include Inherited Members
+</label>
+<br />
+<input id='protectedCheckbox' type='checkbox' name='membersOptionsFilter' onclick='SetMembersOptions(this)' />
+<label for='protectedCheckbox'>
+Include Protected Members
+</label>
+<br />
+</div>
+</div>
+<div id='nstext'>
+<h2><span id='PublicMethods' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='PublicMethodsImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Public Methods</span></h2><div id='PublicMethodsSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<table class='memberlist' cellspacing='0'>
+<col width='5%' />
+<col width='35%' />
+<col width='60%' />
+<tr>
+<th>&#160;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90776' href='M_MindFusion_Graphs_FlowchartLayout_getAnchoring_0.htm'>getAnchoring</a></p></td>
+<td><p>Gets a value indicating how to align links to the anchor points of nodes.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90777' href='M_MindFusion_Graphs_FlowchartLayout_getBranchPadding_0.htm'>getBranchPadding</a></p></td>
+<td><p>Gets how much space to leave between adjacent decision branches in the flowchart.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90779' href='M_MindFusion_Graphs_FlowchartLayout_getKeepGroupLayout_0.htm'>getKeepGroupLayout</a></p></td>
+<td><p>Gets a value indicating whether to treat each Group of nodes as a single vertex in the arranged graph.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90780' href='M_MindFusion_Graphs_FlowchartLayout_getLinkPadding_0.htm'>getLinkPadding</a></p></td>
+<td><p>Gets how much space to leave between adjacent back links designating nested loops.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90781' href='M_MindFusion_Graphs_FlowchartLayout_getMultipleGraphsPlacement_0.htm'>getMultipleGraphsPlacement</a></p></td>
+<td><p>Gets a value indicating how multiple independent graphs in the diagram should be positioned relatively to each other.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90782' href='M_MindFusion_Graphs_FlowchartLayout_getNodeDistance_0.htm'>getNodeDistance</a></p></td>
+<td><p>Gets the distance between consecutive nodes in the flowchart.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90783' href='M_MindFusion_Graphs_FlowchartLayout_getOrientation_0.htm'>getOrientation</a></p></td>
+<td><p>Gets the orientation of the arranged graph.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90784' href='M_MindFusion_Graphs_FlowchartLayout_init_0.htm'>init</a></p></td>
+<td><p>Returns a Builder object used to configure this <span class='repeatingLink'>FlowchartLayout</span> instance.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90785' href='M_MindFusion_Graphs_FlowchartLayout_setAnchoring_1_Anchoring.htm'>setAnchoring</a></p></td>
+<td><p>Sets a value indicating how to align links to the anchor points of nodes.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90786' href='M_MindFusion_Graphs_FlowchartLayout_setBranchPadding_1_Number.htm'>setBranchPadding</a></p></td>
+<td><p>Sets how much space to leave between adjacent decision branches in the flowchart.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90788' href='M_MindFusion_Graphs_FlowchartLayout_setKeepGroupLayout_1_Boolean.htm'>setKeepGroupLayout</a></p></td>
+<td><p>Sets a value indicating whether to treat each Group of nodes as a single vertex in the arranged graph.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90789' href='M_MindFusion_Graphs_FlowchartLayout_setLinkPadding_1_Number.htm'>setLinkPadding</a></p></td>
+<td><p>Sets how much space to leave between adjacent back links designating nested loops.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90790' href='M_MindFusion_Graphs_FlowchartLayout_setMultipleGraphsPlacement_1_MultipleGraphsPlacement.htm'>setMultipleGraphsPlacement</a></p></td>
+<td><p>Sets a value indicating how multiple independent graphs in the diagram should be positioned relatively to each other.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90791' href='M_MindFusion_Graphs_FlowchartLayout_setNodeDistance_1_Number.htm'>setNodeDistance</a></p></td>
+<td><p>Sets the distance between consecutive nodes in the flowchart.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='90792' href='M_MindFusion_Graphs_FlowchartLayout_setOrientation_1_Orientation.htm'>setOrientation</a></p></td>
+<td><p>Sets the orientation of the arranged graph.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='90793' href='M_MindFusion_Graphs_FlowchartLayout_With_0.htm'>With</a></p></td>
+<td><p>Returns a Builder object used to configure and create new <span class='repeatingLink'>FlowchartLayout</span> instances.</p></td>
+</tr>
+</table>
+</div>
+<h2><span id='SeeAlso' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SeeAlsoImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;See Also</span></h2><div id='SeeAlsoSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p><a id='90772' href='T_MindFusion_Graphs_FlowchartLayout.htm' title=''>FlowchartLayout Class</a><br/><a id='32574' href='N_MindFusion_Graphs.htm' title=''>MindFusion.Graphs Namespace</a></p>
+</div>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

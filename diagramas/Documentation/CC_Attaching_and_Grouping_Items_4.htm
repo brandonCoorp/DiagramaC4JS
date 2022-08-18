@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='37869' />
+<title>Attaching and Grouping Items</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Attaching and Grouping Items</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p><span>MindFusion.Diagramming for JavaScript</span> allows attaching a node to another node, establishing a subordinate&#160;- master relationship between them. The easiest way to attach nodes is to call the <a id='37839' href='M_MindFusion_Diagramming_DiagramNode_attachTo_1_DiagramNode.htm' title=''>attachTo</a> method. When a master&#160;node is moved,&#160;its subordinated nodes follow it, so that the initial distance between the&#160;nodes stays constant. This happens both when a user moves the master&#160;node around, and when the&#160;node position is changed using a method or a property.</p><h2>Possible Uses</h2><ul><li>Attach a <a id='32510' href='M_MindFusion_Diagramming_ShapeNode_setTransparent_1_Boolean.htm' title=''>Transparent</a> shape node to another&#160;node and set its <a id='32348' href='M_MindFusion_Diagramming_DiagramItem_setText_1_String.htm' title=''>Text</a>, so that the shape node acts as an additional label assigned to the master node.</li><li>Attach a shape node to another&#160;node and set&#160;its <a id='32501' href='M_MindFusion_Diagramming_ShapeNode_setImage_1_Image.htm' title=''>Image</a>, so it acts as an additional icon displayed inside or near the master node.</li><li>Attach a node to another&#160;node and handle <a id='34116' href='F_MindFusion_Diagramming_Events_nodeClicked.htm' title=''>nodeClicked</a> or similar events to perform some action on the master node. This makes the subordinated node act as a button or another type of UI element attached to the&#160;master node.</li><li>Attach child elements in a tree branch to the branch root, so that when a user moves a tree node, the node's children moves simultaneously with it. Modifying an item in such hierarchical group makes the modification pervade through all dependant subordinated items.</li><li>In all previous scenarios, the <a id='38228' href='M_MindFusion_Diagramming_DiagramItem_setLocked_1_Boolean.htm' title=''>Locked</a> property can be set for attached nodes which are used only as decorations embellishing the main item. That prevents users from selecting, modifying or drawing links to the subordinate nodes.</li></ul><h2>Hierarchical Grouping</h2><p>Every&#160;node in&#160;a group can be the master&#160;node of another group,&#160;that is,&#160;a&#160;node can be subordinate in one group and meanwhile be another group's master. <span>MindFusion.Diagramming for JavaScript</span> doesn't impose any limits to the depth and width of group hierarchies built that way. However, it is not possible to put a&#160;node as a subordinate in more than one groups because the hierarchy relations would become ambiguous.</p><h2>Unions</h2><p>It is possible to create such groups, that if any item in the hierarchy is modified, all other items are updated too. This can be done by putting the items in circular chain of dependencies&#160;-&#160;that is,&#160;item1 is attached to item2, item2 to item3&#160;...&#160;itemN to item1. If any of these items is modified, the change will propagate through the chain until it reaches its originator. </p><h2>Accessing Group Items</h2><p>The master node in a group can be accessed using the&#160;<a id='37844' href='M_MindFusion_Diagramming_DiagramNode_getMasterNode_0.htm' title=''>getMasterNode</a>&#160;method of attached nodes.&#160;The&#160;array returned by invoking&#160;<a id='37841' href='M_MindFusion_Diagramming_DiagramNode_getAttachedNodes_0.htm' title=''>getAttachedNodes</a>&#160;on&#160;a master node contains references to all subordinate nodes attached to it.</p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

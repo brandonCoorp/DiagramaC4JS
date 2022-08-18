@@ -1,0 +1,20 @@
+.divContenedores{
+    text-align:center
+}
+.divleft{
+    float: left;
+   
+}
+.divright{
+    float: right;
+    padding-right: 5%;
+    padding-bottom: 1%;
+
+}
+.divcenter{
+   display:inline-block
+}
+.textdiv{
+    font: bold;
+    color: black;
+}

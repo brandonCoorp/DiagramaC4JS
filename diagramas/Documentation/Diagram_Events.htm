@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='29710' />
+<title>Diagram Events</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Diagram Events</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p>There are various events raised after user interaction in JsDiagram. These events are accessible as static fields of the <a id='34108' href='T_MindFusion_Diagramming_Events.htm' title=''>Events</a> class. Event&#160;listeners&#160;are&#160;attached to a <a id='32377' href='CC_T_MindFusion_Diagramming_Diagram_0.htm' title=''>Diagram</a> instance through the <a id='32381' href='M_MindFusion_Diagramming_Diagram_addEventListener_2_String_Method.htm' title=''>addEventListener</a> method.</p><p>The following sample code attaches an event listener to the nodeCreated event. The variable <i>diagram</i> identifies a <span class='repeatingLink'>Diagram</span> object and <i>onNodeCreated</i> is the name of the listener function.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>// a shortcut to the Events class<br/>var Events = MindFusion.Diagramming.Events;</p><p>// add the listener<br/>diagram.addEventListener(Events.nodeCreated, onNodeCreated);</p></td></tr></table></p><p>The declaration of&#160;all event handlers should look similar to the following, with a <i>sender</i> event specifying the diagram, and an <i>args</i> argument that is an instance of either <a id='32511' href='CC_T_MindFusion_Diagramming_NodeEventArgs_0.htm' title=''>NodeEventArgs</a> or <a id='29711' href='CC_T_MindFusion_Diagramming_LinkEventArgs_0.htm' title=''>LinkEventArgs</a>:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>function onNodeCreated(sender, args)<br/>{<br/>&#160;&#160;&#160; // ...<br/>}</p></td></tr></table></p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

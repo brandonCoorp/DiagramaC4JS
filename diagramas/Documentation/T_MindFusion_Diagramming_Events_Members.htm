@@ -1,0 +1,399 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='34109' />
+<title>MindFusion.Diagramming.Events Members</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style=''><span class='title'>Events Members</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE; padding: 2pt 5pt 4pt 12pt;'><span><a id='' href='#PublicFields'>Fields</a> </span></td>
+</tr>
+<tr>
+<td style='height: 19px; border-top: solid 1px #FFFFFF; border-bottom: solid 1px #C8CDDE; padding: 0pt 0pt 0pt 12pt;'>
+<span style='cursor: default' onkeypress='ExpandCollapseAll_CheckKey(toggleAllImage);' onclick='ExpandCollapseAll(toggleAllImage);'>
+<img src='collapsesmall.png' title='CollapseAll image' id='toggleAllImage' />
+<label style='display: none;' id='collapseAllLabel' for='toggleAllImage'>
+Collapse All
+</label>
+<label style='display: none;' id='expandAllLabel' for='toggleAllImage'>
+Expand All
+</label>
+&#160;</span>
+<span id='membersOptionsFilterToolTip' style='cursor:default;' onmouseover='membersOptionsFilterImage.src=dropDownHoverImage.src;' onmouseout='membersOptionsFilterImage.src=dropDownImage.src;'>
+<img src='arrow.png' title='DropDown image' id='membersOptionsFilterImage' /></img>
+<label id='showAllMembersLabel' for='membersOptionsFilterImage' style='display: inherit;'>
+Members Options: Show All
+</label>
+<label id='filteredMembersLabel' for='membersOptionsFilterImage' style='display: none;'>
+Members Options: Filtered
+</label>
+</span>
+</td>
+</tr>
+</table>
+<div id='membersOptionsSpan'>
+<input id='inheritedCheckbox' type='checkbox' name='membersOptionsFilter' onclick='SetMembersOptions(this)' />
+<label for='inheritedCheckbox'>
+Include Inherited Members
+</label>
+<br />
+<input id='protectedCheckbox' type='checkbox' name='membersOptionsFilter' onclick='SetMembersOptions(this)' />
+<label for='protectedCheckbox'>
+Include Protected Members
+</label>
+<br />
+</div>
+</div>
+<div id='nstext'>
+<p>Defines all events raised by the <a id='32377' href='CC_T_MindFusion_Diagramming_Diagram_0.htm' title=''>Diagram</a> component.</p>
+<p>The following tables list the members exposed by the <a id='34108' href='T_MindFusion_Diagramming_Events.htm' title=''>Events</a> type.</p>
+<h2><span id='PublicFields' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='PublicFieldsImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Public Fields</span></h2><div id='PublicFieldsSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<table class='memberlist' cellspacing='0'>
+<col width='5%' />
+<col width='35%' />
+<col width='60%' />
+<tr>
+<th>&#160;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='57772' href='F_MindFusion_Diagramming_Events_animatedLayoutCompleted.htm'>animatedLayoutCompleted</a></p></td>
+<td><p>Raised when an animated layout completes.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='57820' href='F_MindFusion_Diagramming_Events_cellTextEdited.htm'>cellTextEdited</a></p></td>
+<td><p>Raised when the user edits the text of a table cell. The event handlers get a <a id='57834' href='T_MindFusion_Diagramming_CellEventArgs_0.htm' title=''>CellEventArgs</a> instance that contains data&#160;about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='19766' href='F_MindFusion_Diagramming_Events_clicked.htm'>clicked</a></p></td>
+<td><p>Raised when the user clicks the diagram at a point where no items are located. The event handlers get a <a id='51239' href='T_MindFusion_Diagramming_DiagramEventArgs_0.htm' title=''>DiagramEventArgs</a> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='38634' href='F_MindFusion_Diagramming_Events_containerChildAdded.htm'>containerChildAdded</a></p></td>
+<td><p>Raised when the user adds a node to a <a id='45247' href='CC_T_MindFusion_Diagramming_ContainerNode_0.htm' title=''>ContainerNode</a>. Event handlers&#160;receive a <a id='32511' href='CC_T_MindFusion_Diagramming_NodeEventArgs_0.htm' title=''>NodeEventArgs</a> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='50317' href='F_MindFusion_Diagramming_Events_containerChildAdding.htm'>containerChildAdding</a></p></td>
+<td><p>A validation event raised to let you prevent users from adding child nodes to a container.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='38640' href='F_MindFusion_Diagramming_Events_containerChildRemoved.htm'>containerChildRemoved</a></p></td>
+<td><p>Raised when the user removes a node from a <span class='repeatingLink'>ContainerNode</span>. Event handlers receive a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='50318' href='F_MindFusion_Diagramming_Events_containerChildRemoving.htm'>containerChildRemoving</a></p></td>
+<td><p>A validation event raised to let you prevent users from removing child nodes from a container.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='38644' href='F_MindFusion_Diagramming_Events_containerFolded.htm'>containerFolded</a></p></td>
+<td><p>Raised when the user folds a container by clicking the arrow-up button in the container's caption area. Event handlers receive a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='38645' href='F_MindFusion_Diagramming_Events_containerUnfolded.htm'>containerUnfolded</a></p></td>
+<td><p>Raised when the user unfolds a container by clicking the arrow-down button in the container's caption area. Event handlers receive a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='48164' href='F_MindFusion_Diagramming_Events_controlLoaded.htm'>controlLoaded</a></p></td>
+<td><p>Raised when the control is loaded.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='57821' href='F_MindFusion_Diagramming_Events_createEditControl.htm'>createEditControl</a></p></td>
+<td><p>Raised to let you create a custom inplace editor control. Event handlers get an <a id='32415' href='T_MindFusion_Diagramming_InplaceEditEventArgs.htm' title=''>InplaceEditEventArgs</a> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='57822' href='F_MindFusion_Diagramming_Events_deserializeTag.htm'>deserializeTag</a></p></td>
+<td><p>Raised when the <a id='32337' href='M_MindFusion_Diagramming_DiagramItem_getTag_0.htm' title=''>Tag</a> or <a id='21974' href='M_MindFusion_Diagramming_DiagramItem_getId_0.htm' title=''>Id</a> of a diagram item must be deserialized from XML format.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='50443' href='F_MindFusion_Diagramming_Events_drawAdjustmentHandles.htm'>drawAdjustmentHandles</a></p></td>
+<td><p>Raised to draw custom adjustment handles.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='51595' href='F_MindFusion_Diagramming_Events_enterInplaceEditMode.htm'>enterInplaceEditMode</a></p></td>
+<td><p>Raised when entering inplace-edit mode. Event handlers get an <span class='repeatingLink'>InplaceEditEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='91705' href='F_MindFusion_Diagramming_Events_expandButtonClicked.htm'>expandButtonClicked</a></p></td>
+<td><p>Raised if <a id='91703' href='M_MindFusion_Diagramming_Diagram_setExpandButtonAction_1_ExpandButtonAction.htm' title=''>ExpandButtonAction</a> is set to <a id='91704' href='T_MindFusion_Diagramming_ExpandButtonAction_1.htm' title=''>raiseEvents</a> and the [+/-]button of an <a id='37842' href='M_MindFusion_Diagramming_DiagramNode_getExpandable_0.htm' title=''>expandable</a> node is clicked.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='4198' href='F_MindFusion_Diagramming_Events_headerResized.htm'>headerResized</a></p></td>
+<td><p>Raised when the user finished resizing a header.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='4199' href='F_MindFusion_Diagramming_Events_headerStartResizing.htm'>headerStartResizing</a></p></td>
+<td><p>Raised when the user starts resizing a header.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='50444' href='F_MindFusion_Diagramming_Events_hitTestAdjustmentHandles.htm'>hitTestAdjustmentHandles</a></p></td>
+<td><p>Raised to hit-test custom adjustment handles.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='90697' href='F_MindFusion_Diagramming_Events_hyperlinkClicked.htm'>hyperlinkClicked</a></p></td>
+<td><p>Raised when the user clicks a hyperlink inside a node.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='19087' href='F_MindFusion_Diagramming_Events_initializeLink.htm'>initializeLink</a></p></td>
+<td><p>Raised when the user starts drawing a new link, just after the <a id='32441' href='CC_T_MindFusion_Diagramming_DiagramLink_0.htm' title=''>DiagramLink</a> instance is created. Event handlers receive a <a id='29711' href='CC_T_MindFusion_Diagramming_LinkEventArgs_0.htm' title=''>LinkEventArgs</a> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='19088' href='F_MindFusion_Diagramming_Events_initializeNode.htm'>initializeNode</a></p></td>
+<td><p>Raised when the user starts drawing a new node, just after the <a id='32274' href='CC_T_MindFusion_Diagramming_DiagramNode_0.htm' title=''>DiagramNode</a> instance is created. Event handlers receive a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='4203' href='F_MindFusion_Diagramming_Events_itemAdded.htm'>itemAdded</a></p></td>
+<td><p>Raised when an item is added to the diagram.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='4208' href='F_MindFusion_Diagramming_Events_itemRemoved.htm'>itemRemoved</a></p></td>
+<td><p>Raised when an item is removed from the diagram.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='22534' href='F_MindFusion_Diagramming_Events_laneGridCellTextEdited.htm'>laneGridCellTextEdited</a></p></td>
+<td><p>Raised when the used edits the text of a grid cell. Event handlers&#160;receive a <span class='repeatingLink'>CellEventArgs</span> instance that contains data&#160;about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='51596' href='F_MindFusion_Diagramming_Events_leaveInplaceEditMode.htm'>leaveInplaceEditMode</a></p></td>
+<td><p>Raised when leaving inplace-edit mode. Event handlers get an <span class='repeatingLink'>InplaceEditEventArgs</span> instance that contains data&#160;about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34111' href='F_MindFusion_Diagramming_Events_linkClicked.htm'>linkClicked</a></p></td>
+<td><p>Raised when the user clicks a link. The event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data&#160;about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34112' href='F_MindFusion_Diagramming_Events_linkCreated.htm'>linkCreated</a></p></td>
+<td><p>Raised when the user draws a new link. The event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='37848' href='F_MindFusion_Diagramming_Events_linkCreating.htm'>linkCreating</a></p></td>
+<td><p>A validation event raised while the user is drawing a new link. The event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34113' href='F_MindFusion_Diagramming_Events_linkDeleted.htm'>linkDeleted</a></p></td>
+<td><p>Raised when a link is deleted, either programmatically or by the user. The event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='37849' href='F_MindFusion_Diagramming_Events_linkDeleting.htm'>linkDeleting</a></p></td>
+<td><p>Raised when the user tries to delete a link, this event lets you cancel the operation. The event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='47398' href='F_MindFusion_Diagramming_Events_linkDeselected.htm'>linkDeselected</a></p></td>
+<td><p>Raised when a link is deselected, either programmatically or by the user. The event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='47399' href='F_MindFusion_Diagramming_Events_linkDoubleClicked.htm'>linkDoubleClicked</a></p></td>
+<td><p>Raised when the user double-clicks a link. The event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34114' href='F_MindFusion_Diagramming_Events_linkModified.htm'>linkModified</a></p></td>
+<td><p>Raised when the user moves any control point of a link. The event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='37850' href='F_MindFusion_Diagramming_Events_linkModifying.htm'>linkModifying</a></p></td>
+<td><p>A validation event raised while the user is modifying a link. The event handlers get a LinkEventArgs instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='59708' href='F_MindFusion_Diagramming_Events_linkPasted.htm'>linkPasted</a></p></td>
+<td><p>Raised when a link has been pasted from the clipboard. The event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='51597' href='F_MindFusion_Diagramming_Events_linkPointed.htm'>linkPointed</a></p></td>
+<td><p>Raised when the mouse pointer hovers over a link. Event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='47400' href='F_MindFusion_Diagramming_Events_linkSelected.htm'>linkSelected</a></p></td>
+<td><p>Raised when a link is selected, either programmatically or by the user. The event handlers get a <span class='repeatingLink'>LinkEventArgs</span> instance that contains data&#160;about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34115' href='F_MindFusion_Diagramming_Events_linkTextEdited.htm'>linkTextEdited</a></p></td>
+<td><p>Raised when the user edits the text of a link.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34116' href='F_MindFusion_Diagramming_Events_nodeClicked.htm'>nodeClicked</a></p></td>
+<td><p>Raised when the user clicks a node. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data&#160;about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34117' href='F_MindFusion_Diagramming_Events_nodeCreated.htm'>nodeCreated</a></p></td>
+<td><p>Raised when the user draws a new node. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='37851' href='F_MindFusion_Diagramming_Events_nodeCreating.htm'>nodeCreating</a></p></td>
+<td><p>A validation event raised while the user is drawing a new node. The event handlers get a NodeEventArgs instance that contains data&#160;about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34118' href='F_MindFusion_Diagramming_Events_nodeDeleted.htm'>nodeDeleted</a></p></td>
+<td><p>Raised when a node is deleted, either programmatically or by the user. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='37852' href='F_MindFusion_Diagramming_Events_nodeDeleting.htm'>nodeDeleting</a></p></td>
+<td><p>Raised when the user tries to delete a node, this event lets you cancel the operation. The event handlers get a NodeEventArgs instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='47401' href='F_MindFusion_Diagramming_Events_nodeDeselected.htm'>nodeDeselected</a></p></td>
+<td><p>Raised when a node is deselected, either programmatically or by the user. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='91706' href='F_MindFusion_Diagramming_Events_nodeDomCreated.htm'>nodeDomCreated</a></p></td>
+<td><p>Raised when the content of a <a id='91681' href='T_MindFusion_Diagramming_ControlNode_0.htm' title=''>ControlNode</a> is added to the page DOM.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='47402' href='F_MindFusion_Diagramming_Events_nodeDoubleClicked.htm'>nodeDoubleClicked</a></p></td>
+<td><p>Raised when the user double-clicks a node. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34119' href='F_MindFusion_Diagramming_Events_nodeModified.htm'>nodeModified</a></p></td>
+<td><p>Raised when the user moves or resizes a node. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='37853' href='F_MindFusion_Diagramming_Events_nodeModifying.htm'>nodeModifying</a></p></td>
+<td><p>A validation event raised while the user is moving or resizing a node. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='59713' href='F_MindFusion_Diagramming_Events_nodePasted.htm'>nodePasted</a></p></td>
+<td><p>Raised when a node has been pasted from the clipboard. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='51598' href='F_MindFusion_Diagramming_Events_nodePointed.htm'>nodePointed</a></p></td>
+<td><p>Raised when the mouse pointer hovers over a node. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='47403' href='F_MindFusion_Diagramming_Events_nodeSelected.htm'>nodeSelected</a></p></td>
+<td><p>Raised when a node is selected, either programmatically or by the user. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34120' href='F_MindFusion_Diagramming_Events_nodeTextEdited.htm'>nodeTextEdited</a></p></td>
+<td><p>Raised when the user edits the text of a node. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34121' href='F_MindFusion_Diagramming_Events_repaint.htm'>repaint</a></p></td>
+<td><p>Raised when the diagram has been repainted.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='37854' href='F_MindFusion_Diagramming_Events_selectionModifying.htm'>selectionModifying</a></p></td>
+<td><p>A validation event raised while the user is moving or resizing multiple items. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='90698' href='F_MindFusion_Diagramming_Events_serializeTag.htm'>serializeTag</a></p></td>
+<td><p>Raised when the <span class='repeatingLink'>Tag</span> or <span class='repeatingLink'>Id</span> of a diagram item must be serialized in XML format.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='34122' href='F_MindFusion_Diagramming_Events_sizeChanged.htm'>sizeChanged</a></p></td>
+<td><p>Raised when the size of the diagram canvas has changed.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='22535' href='F_MindFusion_Diagramming_Events_tableColumnResized.htm'>tableColumnResized</a></p></td>
+<td><p>Raised when the user finishes resizing a column in a table. Event handlers receive <span class='repeatingLink'>CellEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='22536' href='F_MindFusion_Diagramming_Events_tableColumnResizing.htm'>tableColumnResizing</a></p></td>
+<td><p>Raised when the user resizes a column in a table interactively. Event handlers receive CellValidationEventArgs instance that contains data&#160;about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='22537' href='F_MindFusion_Diagramming_Events_tableRowResized.htm'>tableRowResized</a></p></td>
+<td><p>Raised when the user finishes resizing a row in a table.  Event handlers receive <span class='repeatingLink'>CellEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='22538' href='F_MindFusion_Diagramming_Events_tableRowResizing.htm'>tableRowResizing</a></p></td>
+<td><p>Raised when the user resizes a row in a table interactively. Event handlers receive CellValidationEventArgs instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='37970' href='F_MindFusion_Diagramming_Events_treeCollapsed.htm'>treeCollapsed</a></p></td>
+<td><p>Raised when a user collapses a tree branch by clicking the [-] button of an <a id='37846' href='CC_M_MindFusion_Diagramming_DiagramNode_setExpandable_1_Boolean_0.htm' title=''>Expandable</a> node. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+<tr>
+<td><img src='field.png' title='Public Field' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='37971' href='F_MindFusion_Diagramming_Events_treeExpanded.htm'>treeExpanded</a></p></td>
+<td><p>Raised when a user expands a tree branch by clicking the [+] button of an <span class='repeatingLink'>Expandable</span> node. The event handlers get a <span class='repeatingLink'>NodeEventArgs</span> instance that contains data about this event.</p></td>
+</tr>
+</table>
+</div>
+<h2><span id='SeeAlso' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SeeAlsoImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;See Also</span></h2><div id='SeeAlsoSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p><a id='34108' href='T_MindFusion_Diagramming_Events.htm' title=''>Events Class</a><br/><a id='32253' href='CC_N_MindFusion_Diagramming_0.htm' title=''>MindFusion.Diagramming Namespace</a></p>
+</div>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

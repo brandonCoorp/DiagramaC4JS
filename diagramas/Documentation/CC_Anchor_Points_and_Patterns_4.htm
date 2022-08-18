@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='37325' />
+<title>Anchor Points and Patterns</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Anchor Points and Patterns</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p><h2>Anchor Points</h2><p>For each node you can define one or more points to which links should dock when connecting to that node. Such points are represented by instances of the <a id='35572' href='CC_T_MindFusion_Diagramming_AnchorPoint_0.htm' title=''>AnchorPoint</a> class. The position of an anchor point relative to node's bounding rectangle is specified via the <a id='36197' href='M_MindFusion_Diagramming_AnchorPoint_getX_0.htm' title=''>X</a> and <a id='36211' href='M_MindFusion_Diagramming_AnchorPoint_getY_0.htm' title=''>Y</a> properties. Their values are expressed as percent of the node's width and height to accommodate for moving and resizing. You can control whether an anchor point accepts incoming or outgoing links or both. That is done via the <a id='35828' href='M_MindFusion_Diagramming_AnchorPoint_getAllowIncoming_0.htm' title=''>AllowIncoming</a> and <a id='35838' href='M_MindFusion_Diagramming_AnchorPoint_getAllowOutgoing_0.htm' title=''>AllowOutgoing</a> properties. When a link is drawn, its ends are aligned to the nearest anchors allowing docking of the respective end type.</p><h2>Anchor Patterns</h2><p>An <a id='36326' href='CC_T_MindFusion_Diagramming_AnchorPattern_0.htm' title=''>AnchorPattern</a> instance defines a set of anchor points to be used together. When creating an anchor pattern, pass to its constructor an array of <a id='35572' href='CC_T_MindFusion_Diagramming_AnchorPoint_0.htm' title=''>AnchorPoint</a> objects. The <span class='repeatingLink'>AnchorPattern</span> class exposes several predefined patterns as static properties. An existing pattern can be assigned as a single entity to the <a id='35407' href='M_MindFusion_Diagramming_DiagramNode_setAnchorPattern_1_AnchorPattern.htm' title=''>AnchorPattern</a> property of nodes. The following example creates a pattern of four anchor points:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var AnchorPattern = MindFusion.Diagramming.AnchorPattern;<br/>var AnchorPoint = MindFusion.Diagramming.AnchorPoint;<br/><br/>var apat1 = new AnchorPattern([<br/>&#160;&#160;&#160;&#160;new AnchorPoint(50, 0, true, true),<br/>&#160;&#160;&#160;&#160;new AnchorPoint(100, 50, true, true),<br/>&#160;&#160;&#160;&#160;new AnchorPoint(50, 100, true, true),<br/>&#160;&#160;&#160;&#160;new AnchorPoint(0, 50, true, true)<br/>&#160;&#160;&#160;&#160;]);</p></td></tr></table></p><p>The points are located at the middles of bounding rectangle sides of nodes to which the pattern is assigned. All four points accept both incoming and outgoing links.</p></p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

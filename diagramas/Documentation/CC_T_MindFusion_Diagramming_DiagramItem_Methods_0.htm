@@ -1,0 +1,524 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='32327' />
+<title>MindFusion.Diagramming.DiagramItem Methods</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>DiagramItem Methods</span></td>
+</tr>
+<tr>
+<td style='height: 19px; border-top: solid 1px #FFFFFF; border-bottom: solid 1px #C8CDDE; padding: 0pt 0pt 0pt 12pt;'>
+<span style='cursor: default' onkeypress='ExpandCollapseAll_CheckKey(toggleAllImage);' onclick='ExpandCollapseAll(toggleAllImage);'>
+<img src='collapsesmall.png' title='CollapseAll image' id='toggleAllImage' />
+<label style='display: none;' id='collapseAllLabel' for='toggleAllImage'>
+Collapse All
+</label>
+<label style='display: none;' id='expandAllLabel' for='toggleAllImage'>
+Expand All
+</label>
+&#160;</span>
+<span id='membersOptionsFilterToolTip' style='cursor:default;' onmouseover='membersOptionsFilterImage.src=dropDownHoverImage.src;' onmouseout='membersOptionsFilterImage.src=dropDownImage.src;'>
+<img src='arrow.png' title='DropDown image' id='membersOptionsFilterImage' /></img>
+<label id='showAllMembersLabel' for='membersOptionsFilterImage' style='display: inherit;'>
+Members Options: Show All
+</label>
+<label id='filteredMembersLabel' for='membersOptionsFilterImage' style='display: none;'>
+Members Options: Filtered
+</label>
+</span>
+</td>
+</tr>
+</table>
+<div id='membersOptionsSpan'>
+<input id='inheritedCheckbox' type='checkbox' name='membersOptionsFilter' onclick='SetMembersOptions(this)' />
+<label for='inheritedCheckbox'>
+Include Inherited Members
+</label>
+<br />
+<input id='protectedCheckbox' type='checkbox' name='membersOptionsFilter' onclick='SetMembersOptions(this)' />
+<label for='protectedCheckbox'>
+Include Protected Members
+</label>
+<br />
+</div>
+</div>
+<div id='nstext'>
+<h2><span id='PublicMethods' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='PublicMethodsImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Public Methods</span></h2><div id='PublicMethodsSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<table class='memberlist' cellspacing='0'>
+<col width='5%' />
+<col width='35%' />
+<col width='60%' />
+<tr>
+<th>&#160;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32328' href='M_MindFusion_Diagramming_DiagramItem_addCanvasElements_0.htm'>addCanvasElements</a></p></td>
+<td><p>Derived classes must implement this method by adding their graphics primitives to the canvas.elements collection.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32330' href='M_MindFusion_Diagramming_DiagramItem_allowDrag_1_InteractionState.htm'>allowDrag</a></p></td>
+<td><p>Invoked to validate the drag operation.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32331' href='M_MindFusion_Diagramming_DiagramItem_cancelDrag_1_InteractionState.htm'>cancelDrag</a></p></td>
+<td><p>Invoked when the interactive modification of this object has been canceled.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32332' href='M_MindFusion_Diagramming_DiagramItem_containsPoint_1_Point.htm'>containsPoint</a></p></td>
+<td><p>Determines whether this item contains the specified point.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='29806' href='M_MindFusion_Diagramming_DiagramItem_endDrag_1_InteractionState_0.htm'>endDrag</a></p></td>
+<td><p>Invoked when the user stops dragging this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='53395' href='M_MindFusion_Diagramming_DiagramItem_fromJson_1_String.htm'>fromJson</a></p></td>
+<td><p>Deserializes this item from a JSON string.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32437' href='M_MindFusion_Diagramming_DiagramItem_getBrush_0.htm'>getBrush</a></p></td>
+<td><p>Gets the object that specifies how to paint the interior of the DiagramItem.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='57766' href='M_MindFusion_Diagramming_DiagramItem_getContainer_0.htm'>getContainer</a></p></td>
+<td><p>Gets the parent container node of this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19067' href='CC_M_MindFusion_Diagramming_DiagramItem_getEffectiveBrush_0_0.htm'>getEffectiveBrush</a></p></td>
+<td><p>Gets the effective brush that should be used to paint this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19068' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveFont_0.htm'>getEffectiveFont</a></p></td>
+<td><p>Gets the effective font that should be used to render this item's text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19069' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveFontName_0.htm'>getEffectiveFontName</a></p></td>
+<td><p>Gets the name of the effective font that should be used to render this item's text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19070' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveFontSize_0.htm'>getEffectiveFontSize</a></p></td>
+<td><p>Gets the size of the effective font that should be used to render this item's text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='56613' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveFontStyle_0.htm'>getEffectiveFontStyle</a></p></td>
+<td><p>Gets the style of the effective font that should be used to render this item's text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19071' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveShadowColor_0.htm'>getEffectiveShadowColor</a></p></td>
+<td><p>Gets the effective color that should be used to render this item's shadow.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19072' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveStroke_0.htm'>getEffectiveStroke</a></p></td>
+<td><p>Gets the effective color that should be used to stroke this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='56614' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveStrokeDashStyle_0.htm'>getEffectiveStrokeDashStyle</a></p></td>
+<td><p>Gets the effective line dash pattern that should be applied when stroking this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19073' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveStrokeThickness_0.htm'>getEffectiveStrokeThickness</a></p></td>
+<td><p>Gets the effective line thickness that should be applied when stroking this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19074' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveTextColor_0.htm'>getEffectiveTextColor</a></p></td>
+<td><p>Gets the effective text color that should be used to render this item's text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='22262' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveTextStroke_0.htm'>getEffectiveTextStroke</a></p></td>
+<td><p>Gets the effective text color that should be used to render this item's text outline.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='22300' href='M_MindFusion_Diagramming_DiagramItem_getEffectiveTextStrokeThickness_0.htm'>getEffectiveTextStrokeThickness</a></p></td>
+<td><p>Gets the effective width of the text outline of this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32797' href='M_MindFusion_Diagramming_DiagramItem_getFont_0.htm'>getFont</a></p></td>
+<td><p>Gets the font used to render this item's text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='29807' href='M_MindFusion_Diagramming_DiagramItem_getGraphicsContent_0.htm'>getGraphicsContent</a></p></td>
+<td><p>Returns the array with visual elements that are used to represent this item on the canvas.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='48177' href='M_MindFusion_Diagramming_DiagramItem_getHyperLink_0.htm'>getHyperLink</a></p></td>
+<td><p>Gets the hyperlink associated with this diagram item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='21974' href='M_MindFusion_Diagramming_DiagramItem_getId_0.htm'>getId</a></p></td>
+<td><p>Gets the id of the item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='37833' href='M_MindFusion_Diagramming_DiagramItem_getIgnoreLayout_0.htm'>getIgnoreLayout</a></p></td>
+<td><p>Gets a value indicating whether the position of this item should not be changed by automatic layout methods.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='56615' href='M_MindFusion_Diagramming_DiagramItem_getLayoutTraits_0.htm'>getLayoutTraits</a></p></td>
+<td><p>Gets an object containing properties of the node&#160;specific&#160;to some layout algorithms.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='2759' href='M_MindFusion_Diagramming_DiagramItem_getLineAlignment_0.htm'>getLineAlignment</a></p></td>
+<td><p>Gets how the text should be vertically aligned inside the item's bounding rectangle.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='10108' href='M_MindFusion_Diagramming_DiagramItem_getLocked_0.htm'>getLocked</a></p></td>
+<td><p>Gets a value indicating whether users are allowed to modify this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32334' href='M_MindFusion_Diagramming_DiagramItem_getParent_0.htm'>getParent</a></p></td>
+<td><p>Gets the parent <a id='32377' href='CC_T_MindFusion_Diagramming_Diagram_0.htm' title=''>diagram</a>.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32335' href='M_MindFusion_Diagramming_DiagramItem_getPen_0.htm'>getPen</a></p></td>
+<td><p>Gets an object used to paint the frame of the item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='91857' href='M_MindFusion_Diagramming_DiagramItem_getRepaintBounds_0.htm'>getRepaintBounds</a></p></td>
+<td><p>Gets the repaint region for this item, taking into account factors such as pen width, selection handles and shadow.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32336' href='M_MindFusion_Diagramming_DiagramItem_getSelected_0.htm'>getSelected</a></p></td>
+<td><p>Gets a value indicating whether a <span class='repeatingLink'>DiagramItem</span> is selected.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19075' href='M_MindFusion_Diagramming_DiagramItem_getShadowColor_0.htm'>getShadowColor</a></p></td>
+<td><p>Gets the color used to draw the shadow of this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19076' href='M_MindFusion_Diagramming_DiagramItem_getShadowOffsetX_0.htm'>getShadowOffsetX</a></p></td>
+<td><p>Gets the horizontal offset of the item's shadow.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19077' href='M_MindFusion_Diagramming_DiagramItem_getShadowOffsetY_0.htm'>getShadowOffsetY</a></p></td>
+<td><p>Gets the vertical offset of the item's shadow.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='21954' href='M_MindFusion_Diagramming_DiagramItem_getStroke_0.htm'>getStroke</a></p></td>
+<td><p>Gets a string specifying the color used to stroke the item's frame.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='56616' href='M_MindFusion_Diagramming_DiagramItem_getStrokeDashStyle_0.htm'>getStrokeDashStyle</a></p></td>
+<td><p>Gets the line dash pattern applied when stroking the item's frame.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='21955' href='M_MindFusion_Diagramming_DiagramItem_getStrokeThickness_0.htm'>getStrokeThickness</a></p></td>
+<td><p>Gets the line width applied when stroking the item's frame.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19078' href='M_MindFusion_Diagramming_DiagramItem_getStyle_0.htm'>getStyle</a></p></td>
+<td><p>Gets the style associated with this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32337' href='M_MindFusion_Diagramming_DiagramItem_getTag_0.htm'>getTag</a></p></td>
+<td><p>Gets the tag of the item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32338' href='M_MindFusion_Diagramming_DiagramItem_getText_0.htm'>getText</a></p></td>
+<td><p>Gets the string containing the <span class='repeatingLink'>DiagramItem</span>'s text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='3306' href='M_MindFusion_Diagramming_DiagramItem_getTextAlignment_0.htm'>getTextAlignment</a></p></td>
+<td><p>Gets how the text should be aligned inside the item's bounding rectangle.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='12893' href='M_MindFusion_Diagramming_DiagramItem_getTextColor_0.htm'>getTextColor</a></p></td>
+<td><p>Gets a string specifying the color of the text of this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='29808' href='M_MindFusion_Diagramming_DiagramItem_getTextComponent_0.htm'>getTextComponent</a></p></td>
+<td><p>Gets the <a id='1737' href='T_MindFusion_Drawing_Text.htm' title=''>Text</a> object instance that is used as a container for the item's text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='53396' href='M_MindFusion_Diagramming_DiagramItem_getTextPadding_0.htm'>getTextPadding</a></p></td>
+<td><p>Gets the spacing between the item boundaries and its text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='22340' href='M_MindFusion_Diagramming_DiagramItem_getTextStroke_0.htm'>getTextStroke</a></p></td>
+<td><p>Gets a string specifying the color of the text outline of this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='22531' href='M_MindFusion_Diagramming_DiagramItem_getTextStrokeThickness_0.htm'>getTextStrokeThickness</a></p></td>
+<td><p>Gets the width of the text outline of this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19079' href='M_MindFusion_Diagramming_DiagramItem_getTooltip_0.htm'>getTooltip</a></p></td>
+<td><p>Gets the tooltip text that should be displayed when the mouse hovers over this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='37969' href='M_MindFusion_Diagramming_DiagramItem_getVisible_0.htm'>getVisible</a></p></td>
+<td><p>Gets a value indicating whether this item is visible.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='73703' href='M_MindFusion_Diagramming_DiagramItem_getWeight_0.htm'>getWeight</a></p></td>
+<td><p>Gets a weight value used in layout and path-finding algorithms.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32339' href='M_MindFusion_Diagramming_DiagramItem_getZIndex_0.htm'>getZIndex</a></p></td>
+<td><p>Gets the z-order position of the object.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='48178' href='M_MindFusion_Diagramming_DiagramItem_hitTest_4_Point_Number_Boolean_Boolean.htm'>hitTest</a></p></td>
+<td><p>Returns the diagram item that contains the specified point.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='57819' href='M_MindFusion_Diagramming_DiagramItem_loadFromXml_2_Element_XmlPersistContext.htm'>loadFromXml</a></p></td>
+<td><p>Loads the item content from an XML element.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32340' href='CC_M_MindFusion_Diagramming_DiagramItem_onRemove_0_0.htm'>onRemove</a></p></td>
+<td><p>Called when an item is removed from a <span class='repeatingLink'>Diagram</span>, either by the user, programmatically or via undo / redo.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32341' href='M_MindFusion_Diagramming_DiagramItem_removeCanvasElements_0.htm'>removeCanvasElements</a></p></td>
+<td><p>Derived classes must implement this method by removing their graphics primitives from the canvas.elements collection.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32343' href='M_MindFusion_Diagramming_DiagramItem_saveLocationState_0.htm'>saveLocationState</a></p></td>
+<td><p>Saves the state of this <span class='repeatingLink'>DiagramItem</span>.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='73702' href='M_MindFusion_Diagramming_DiagramItem_saveToXml_2_Element_XmlPersistContext.htm'>saveToXml</a></p></td>
+<td><p>Saves the item content into an XML element.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32344' href='M_MindFusion_Diagramming_DiagramItem_setBrush_1_Object.htm'>setBrush</a></p></td>
+<td><p>Sets an object that specifies how to paint the interior of the <span class='repeatingLink'>DiagramItem</span>.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32798' href='M_MindFusion_Diagramming_DiagramItem_setFont_1_Font.htm'>setFont</a></p></td>
+<td><p>Sets the font used to render this item's text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='48179' href='M_MindFusion_Diagramming_DiagramItem_setHyperLink_1_String.htm'>setHyperLink</a></p></td>
+<td><p>Sets the hyperlink associated with this diagram item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='22061' href='M_MindFusion_Diagramming_DiagramItem_setId_1_Object.htm'>setId</a></p></td>
+<td><p>Lets you set any object as an id for this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='37835' href='M_MindFusion_Diagramming_DiagramItem_setIgnoreLayout_1_Boolean.htm'>setIgnoreLayout</a></p></td>
+<td><p>Sets a value indicating whether the position of this item should not be changed by automatic layout methods.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4166' href='M_MindFusion_Diagramming_DiagramItem_setLineAlignment_1_Alignment.htm'>setLineAlignment</a></p></td>
+<td><p>Sets how the text should be vertically aligned inside the item's bounding rectangle.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='38228' href='M_MindFusion_Diagramming_DiagramItem_setLocked_1_Boolean.htm'>setLocked</a></p></td>
+<td><p>Sets a value indicating whether users are allowed to modify this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32800' href='M_MindFusion_Diagramming_DiagramItem_setPen_1_Object.htm'>setPen</a></p></td>
+<td><p>Sets an object used to paint the frame of the item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32346' href='M_MindFusion_Diagramming_DiagramItem_setSelected_1_Boolean.htm'>setSelected</a></p></td>
+<td><p>Sets a value indicating whether a <span class='repeatingLink'>DiagramItem</span> is selected.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19080' href='M_MindFusion_Diagramming_DiagramItem_setShadowColor_1_String.htm'>setShadowColor</a></p></td>
+<td><p>Sets the color used to draw the shadow of this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19081' href='M_MindFusion_Diagramming_DiagramItem_setShadowOffsetX_1_Number.htm'>setShadowOffsetX</a></p></td>
+<td><p>Sets the horizonal offset of the item's shadow.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19082' href='M_MindFusion_Diagramming_DiagramItem_setShadowOffsetY_1_Number.htm'>setShadowOffsetY</a></p></td>
+<td><p>Sets the vertical offset of the item's shadow.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='21956' href='M_MindFusion_Diagramming_DiagramItem_setStroke_1_String.htm'>setStroke</a></p></td>
+<td><p>Sets a string specifying the color used to stroke the item's frame.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='56617' href='M_MindFusion_Diagramming_DiagramItem_setStrokeDashStyle_1_DashStyle.htm'>setStrokeDashStyle</a></p></td>
+<td><p>Sets the line dash pattern applied when stroking the item's frame.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='21957' href='M_MindFusion_Diagramming_DiagramItem_setStrokeThickness_1_Number.htm'>setStrokeThickness</a></p></td>
+<td><p>Sets the line width applied when stroking the item's frame.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19083' href='M_MindFusion_Diagramming_DiagramItem_setStyle_1_Style.htm'>setStyle</a></p></td>
+<td><p>Sets the style associated with this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32347' href='M_MindFusion_Diagramming_DiagramItem_setTag_1_Object.htm'>setTag</a></p></td>
+<td><p>Lets you set any object as a tag for this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32348' href='M_MindFusion_Diagramming_DiagramItem_setText_1_String.htm'>setText</a></p></td>
+<td><p>Sets a string containing the <span class='repeatingLink'>DiagramItem</span>'s text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='4167' href='M_MindFusion_Diagramming_DiagramItem_setTextAlignment_1_Alignment.htm'>setTextAlignment</a></p></td>
+<td><p>Sets how the text should be aligned inside the item's bounding rectangle.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='12895' href='M_MindFusion_Diagramming_DiagramItem_setTextColor_1_String.htm'>setTextColor</a></p></td>
+<td><p>Sets a string specifying the color of the text of this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='53397' href='M_MindFusion_Diagramming_DiagramItem_setTextPadding_1_Thickness.htm'>setTextPadding</a></p></td>
+<td><p>Sets the spacing between the item boundaries and its text.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='22532' href='M_MindFusion_Diagramming_DiagramItem_setTextStroke_1_String.htm'>setTextStroke</a></p></td>
+<td><p>Sets a string specifying the color of the text outline of this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='22533' href='M_MindFusion_Diagramming_DiagramItem_setTextStrokeThickness_1_Number.htm'>setTextStrokeThickness</a></p></td>
+<td><p>Sets the width of the text outline of this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='19084' href='M_MindFusion_Diagramming_DiagramItem_setTooltip_1_String.htm'>setTooltip</a></p></td>
+<td><p>Sets the tooltip text that should be displayed when the mouse hovers over this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='37836' href='M_MindFusion_Diagramming_DiagramItem_setVisible_1_Boolean.htm'>setVisible</a></p></td>
+<td><p>Sets a value indicating whether this item is visible.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='73704' href='M_MindFusion_Diagramming_DiagramItem_setWeight_1_Number.htm'>setWeight</a></p></td>
+<td><p>Sets a weight value used in layout and path-finding algorithms.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32794' href='M_MindFusion_Diagramming_DiagramItem_setZIndex_1_Number.htm'>setZIndex</a></p></td>
+<td><p>Sets the z-order position of the object.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32350' href='M_MindFusion_Diagramming_DiagramItem_startDrag_1_InteractionState.htm'>startDrag</a></p></td>
+<td><p>Invoked when the user starts dragging this item.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='53398' href='M_MindFusion_Diagramming_DiagramItem_toJson_0.htm'>toJson</a></p></td>
+<td><p>Serializes this item into a JSON string.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32351' href='M_MindFusion_Diagramming_DiagramItem_updateCanvasElements_0.htm'>updateCanvasElements</a></p></td>
+<td><p>Derived classes must implement this method to update the <span class='repeatingLink'>item</span>'s visual elements.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /></td>
+<td><p><a id='32352' href='M_MindFusion_Diagramming_DiagramItem_updateDrag_1_InteractionState.htm'>updateDrag</a></p></td>
+<td><p>Invoked while the user drags this item.</p></td>
+</tr>
+</table>
+</div>
+<h2><span id='SeeAlso' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SeeAlsoImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;See Also</span></h2><div id='SeeAlsoSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p><a id='32324' href='CC_T_MindFusion_Diagramming_DiagramItem_0.htm' title=''>DiagramItem Class</a><br/><a id='32253' href='CC_N_MindFusion_Diagramming_0.htm' title=''>MindFusion.Diagramming Namespace</a></p>
+</div>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

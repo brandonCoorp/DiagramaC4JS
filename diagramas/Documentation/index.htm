@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>MindFusion.Diagramming for JavaScript Programmer's Guide</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all'>
+<link rel='shortcut icon' href='help.ico'>
+<script language='javascript' type='text/javascript'>
+<!--
+function id()
+{
+	if (window.location.search == "")
+		return "0";
+
+	return window.location.search.substring(1);
+}
+
+function lc()
+{
+	var contentsFrame = window.parent.document.getElementById('contentsFrame');
+	var contentsFrameDoc = contentsFrame.contentWindow.document;
+	var topicFrame = contentsFrameDoc.getElementById('topicFrame');
+
+    var par = id();
+    if (par != "0")
+	    topicFrame.contentWindow.location = par;
+}
+-->
+</script>
+</head>
+<frameset cols='100%' rows='63, 1*' frameborder='no' border='0'>
+<noframes>
+The online documentation cannot be displayed in browsers that do not support frames.
+</noframes>
+<frame id='headerFrame' src='IndexHeader.htm' scrolling='no' noresize='noresize'>
+<frame id='contentsFrame' src='IndexContents.htm' onload='lc();' noresize='noresize'>
+</frameset>
+</html>

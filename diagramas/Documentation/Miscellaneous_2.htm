@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='11919' />
+<title>Miscellaneous</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Miscellaneous</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p><h2>Associate Custom Data with Items</h2><p>You can associate custom values from any data type with diagram elements by setting their <a id='32347' href='M_MindFusion_Diagramming_DiagramItem_setTag_1_Object.htm' title=''>Tag</a> and <a id='22061' href='M_MindFusion_Diagramming_DiagramItem_setId_1_Object.htm' title=''>Id</a> properties. Their values will be automatically&#160;serialized&#160;to JSON format using browser's JSON serializer when saving diagram JSON files. If saving XML files, you must handle the <a id='57822' href='F_MindFusion_Diagramming_Events_deserializeTag.htm' title=''>serializeTag</a> and <span class='repeatingLink'>deserializeTag</span> events to save non-string values in XML format. Apart from <span class='repeatingLink'>Tag</span> and <span class='repeatingLink'>Id</span>, JavaScript lets you&#160;create&#160;new object fields dynamically - these however will not be saved automatically in diagram files.</p><h2>Fluent API</h2><p>Builder&#160;objects&#160;with property setter methods and&#160;shortcut methods for fonts and brushes&#160;add support for fluent programming style. Static <a id='7428' href='M_MindFusion_Diagramming_ShapeNode_With_1_void.htm' title=''>With</a> and instance <a id='4290' href='M_MindFusion_Diagramming_ShapeNode_init_0.htm' title=''>init</a> methods in <a id='32324' href='CC_T_MindFusion_Diagramming_DiagramItem_0.htm' title=''>DiagramItem</a>, <a id='19097' href='CC_T_MindFusion_Diagramming_Style_0.htm' title=''>Style</a> and <a id='32634' href='T_MindFusion_Graphs_TreeLayout.htm' title=''>Layout</a> -derived classes return a builder instance that can be used to set up respective new or existing objects:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>diagram.addItem(<br/>&#160;&#160;&#160; ShapeNode.With()<br/>&#160;&#160;&#160; &#160;&#160;&#160; .brush("lightGray")<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .font("Arial", 4)<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .enableStyledText(true)<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .text("Task &lt;i&gt;1&lt;/i&gt;")<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .tooltip("This is the task")<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .create());<br/><br/>diagram.getFactory()<br/>&#160;&#160;&#160;&#160;.createShapeNode(20, 20, 20, 20).init()<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .brush("lightGray", "white", 20)<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .font("Arial", 4)<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .enableStyledText(true)<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .text("Task &lt;i&gt;2&lt;/i&gt;")<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .tooltip("This is the second task");<br/><br/>diagram.arrange(<br/>&#160;&#160;&#160;&#160;TreeLayout.With()<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .levelDistance(20)<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .nodeDistance(20)<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .linkType(TreeLayoutLinkType.Cascading3)<br/>&#160;&#160;&#160;&#160;&#160;&#160;&#160; .create()); </p></td></tr></table></p><p></p><p></p></p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

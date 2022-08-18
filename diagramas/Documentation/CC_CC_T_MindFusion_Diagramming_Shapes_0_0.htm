@@ -1,0 +1,789 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='32271' />
+<title>MindFusion.Diagramming.Shapes Methods</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Shapes Methods</span></td>
+</tr>
+<tr>
+<td style='height: 19px; border-top: solid 1px #FFFFFF; border-bottom: solid 1px #C8CDDE; padding: 0pt 0pt 0pt 12pt;'>
+<span style='cursor: default' onkeypress='ExpandCollapseAll_CheckKey(toggleAllImage);' onclick='ExpandCollapseAll(toggleAllImage);'>
+<img src='collapsesmall.png' title='CollapseAll image' id='toggleAllImage' />
+<label style='display: none;' id='collapseAllLabel' for='toggleAllImage'>
+Collapse All
+</label>
+<label style='display: none;' id='expandAllLabel' for='toggleAllImage'>
+Expand All
+</label>
+&#160;</span>
+<span id='membersOptionsFilterToolTip' style='cursor:default;' onmouseover='membersOptionsFilterImage.src=dropDownHoverImage.src;' onmouseout='membersOptionsFilterImage.src=dropDownImage.src;'>
+<img src='arrow.png' title='DropDown image' id='membersOptionsFilterImage' /></img>
+<label id='showAllMembersLabel' for='membersOptionsFilterImage' style='display: inherit;'>
+Members Options: Show All
+</label>
+<label id='filteredMembersLabel' for='membersOptionsFilterImage' style='display: none;'>
+Members Options: Filtered
+</label>
+</span>
+</td>
+</tr>
+</table>
+<div id='membersOptionsSpan'>
+<input id='inheritedCheckbox' type='checkbox' name='membersOptionsFilter' onclick='SetMembersOptions(this)' />
+<label for='inheritedCheckbox'>
+Include Inherited Members
+</label>
+<br />
+<input id='protectedCheckbox' type='checkbox' name='membersOptionsFilter' onclick='SetMembersOptions(this)' />
+<label for='protectedCheckbox'>
+Include Protected Members
+</label>
+<br />
+</div>
+</div>
+<div id='nstext'>
+<h2><span id='PublicMethods' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='PublicMethodsImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Public Methods</span></h2><div id='PublicMethodsSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<table class='memberlist' cellspacing='0'>
+<col width='5%' />
+<col width='35%' />
+<col width='60%' />
+<tr>
+<th>&#160;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32272' href='M_MindFusion_Diagramming_Shapes_Actor_0.htm'>Actor</a></p></td>
+<td><p>Gets the Actor predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32273' href='M_MindFusion_Diagramming_Shapes_Alternative_0.htm'>Alternative</a></p></td>
+<td><p>Gets the Alternative predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32660' href='M_MindFusion_Diagramming_Shapes_Arrow_0.htm'>Arrow</a></p></td>
+<td><p>Gets the Arrow predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32661' href='M_MindFusion_Diagramming_Shapes_Arrow1_0.htm'>Arrow1</a></p></td>
+<td><p>Gets the Arrow1 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32662' href='M_MindFusion_Diagramming_Shapes_Arrow2_0.htm'>Arrow2</a></p></td>
+<td><p>Gets the Arrow2 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32663' href='M_MindFusion_Diagramming_Shapes_Arrow3_0.htm'>Arrow3</a></p></td>
+<td><p>Gets the Arrow3 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32664' href='M_MindFusion_Diagramming_Shapes_Arrow4_0.htm'>Arrow4</a></p></td>
+<td><p>Gets the Arrow4 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32665' href='M_MindFusion_Diagramming_Shapes_Arrow5_0.htm'>Arrow5</a></p></td>
+<td><p>Gets the Arrow5 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32666' href='M_MindFusion_Diagramming_Shapes_Arrow6_0.htm'>Arrow6</a></p></td>
+<td><p>Gets the Arrow6 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32667' href='M_MindFusion_Diagramming_Shapes_Arrow7_0.htm'>Arrow7</a></p></td>
+<td><p>Gets the Arrow7 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32668' href='M_MindFusion_Diagramming_Shapes_Arrow8_0.htm'>Arrow8</a></p></td>
+<td><p>Gets the Arrow8 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32669' href='M_MindFusion_Diagramming_Shapes_Arrow9_0.htm'>Arrow9</a></p></td>
+<td><p>Gets the Arrow9 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32670' href='M_MindFusion_Diagramming_Shapes_BackSlash_0.htm'>BackSlash</a></p></td>
+<td><p>Gets the BackSlash predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32671' href='M_MindFusion_Diagramming_Shapes_BeginLoop_0.htm'>BeginLoop</a></p></td>
+<td><p>Gets the BeginLoop predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32672' href='M_MindFusion_Diagramming_Shapes_BowArrow_0.htm'>BowArrow</a></p></td>
+<td><p>Gets the BowArrow predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32673' href='M_MindFusion_Diagramming_Shapes_BpmnComplex_0.htm'>BpmnComplex</a></p></td>
+<td><p>Gets the BpmnComplex predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32674' href='M_MindFusion_Diagramming_Shapes_BpmnDataBasedXor_0.htm'>BpmnDataBasedXor</a></p></td>
+<td><p>Gets the BpmnDataBasedXor predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32675' href='M_MindFusion_Diagramming_Shapes_BpmnEndCancel_0.htm'>BpmnEndCancel</a></p></td>
+<td><p>Gets the BpmnEndCancel predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32676' href='M_MindFusion_Diagramming_Shapes_BpmnEndCompensation_0.htm'>BpmnEndCompensation</a></p></td>
+<td><p>Gets the BpmnEndCompensation predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32677' href='M_MindFusion_Diagramming_Shapes_BpmnEndError_0.htm'>BpmnEndError</a></p></td>
+<td><p>Gets the BpmnEndError predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32678' href='M_MindFusion_Diagramming_Shapes_BpmnEndLink_0.htm'>BpmnEndLink</a></p></td>
+<td><p>Gets the BpmnEndLink predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32679' href='M_MindFusion_Diagramming_Shapes_BpmnEndMessage_0.htm'>BpmnEndMessage</a></p></td>
+<td><p>Gets the BpmnEndMessage predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32680' href='M_MindFusion_Diagramming_Shapes_BpmnEndMultiple_0.htm'>BpmnEndMultiple</a></p></td>
+<td><p>Gets the BpmnEndMultiple predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32681' href='M_MindFusion_Diagramming_Shapes_BpmnEndTerminate_0.htm'>BpmnEndTerminate</a></p></td>
+<td><p>Gets the BpmnEndTerminate predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32682' href='M_MindFusion_Diagramming_Shapes_BpmnEventBasedXor_0.htm'>BpmnEventBasedXor</a></p></td>
+<td><p>Gets the BpmnEventBasedXor predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32683' href='M_MindFusion_Diagramming_Shapes_BpmnInclusive_0.htm'>BpmnInclusive</a></p></td>
+<td><p>Gets the BpmnInclusive predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32684' href='M_MindFusion_Diagramming_Shapes_BpmnIntermediateCancel_0.htm'>BpmnIntermediateCancel</a></p></td>
+<td><p>Gets the BpmnIntermediateCancel predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32685' href='M_MindFusion_Diagramming_Shapes_BpmnIntermediateCompensation_0.htm'>BpmnIntermediateCompensation</a></p></td>
+<td><p>Gets the BpmnIntermediateCompensation predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32686' href='M_MindFusion_Diagramming_Shapes_BpmnIntermediateError_0.htm'>BpmnIntermediateError</a></p></td>
+<td><p>Gets the BpmnIntermediateError predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32687' href='M_MindFusion_Diagramming_Shapes_BpmnIntermediateLink_0.htm'>BpmnIntermediateLink</a></p></td>
+<td><p>Gets the BpmnIntermediateLink predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32688' href='M_MindFusion_Diagramming_Shapes_BpmnIntermediateMessage_0.htm'>BpmnIntermediateMessage</a></p></td>
+<td><p>Gets the BpmnIntermediateMessage predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32689' href='M_MindFusion_Diagramming_Shapes_BpmnIntermediateMultiple_0.htm'>BpmnIntermediateMultiple</a></p></td>
+<td><p>Gets the BpmnIntermediateMultiple predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32690' href='M_MindFusion_Diagramming_Shapes_BpmnIntermediateRule_0.htm'>BpmnIntermediateRule</a></p></td>
+<td><p>Gets the BpmnIntermediateRule predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32691' href='M_MindFusion_Diagramming_Shapes_BpmnIntermediateTimer_0.htm'>BpmnIntermediateTimer</a></p></td>
+<td><p>Gets the BpmnIntermediateTimer predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32692' href='M_MindFusion_Diagramming_Shapes_BpmnParallelFork_0.htm'>BpmnParallelFork</a></p></td>
+<td><p>Gets the BpmnParallelFork predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32693' href='M_MindFusion_Diagramming_Shapes_BpmnStartLink_0.htm'>BpmnStartLink</a></p></td>
+<td><p>Gets the BpmnStartLink predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32694' href='M_MindFusion_Diagramming_Shapes_BpmnStartMessage_0.htm'>BpmnStartMessage</a></p></td>
+<td><p>Gets the BpmnStartMessage predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32695' href='M_MindFusion_Diagramming_Shapes_BpmnStartMultiple_0.htm'>BpmnStartMultiple</a></p></td>
+<td><p>Gets the BpmnStartMultiple predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32696' href='M_MindFusion_Diagramming_Shapes_BpmnStartRule_0.htm'>BpmnStartRule</a></p></td>
+<td><p>Gets the BpmnStartRule predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32697' href='M_MindFusion_Diagramming_Shapes_BpmnStartTimer_0.htm'>BpmnStartTimer</a></p></td>
+<td><p>Gets the BpmnStartTimer predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32698' href='M_MindFusion_Diagramming_Shapes_Circle_0.htm'>Circle</a></p></td>
+<td><p>Gets the Circle predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32699' href='M_MindFusion_Diagramming_Shapes_Cloud_0.htm'>Cloud</a></p></td>
+<td><p>Gets the Cloud predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32700' href='M_MindFusion_Diagramming_Shapes_Collate_0.htm'>Collate</a></p></td>
+<td><p>Gets the Collate predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32701' href='M_MindFusion_Diagramming_Shapes_ConeDown_0.htm'>ConeDown</a></p></td>
+<td><p>Gets the ConeDown predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32702' href='M_MindFusion_Diagramming_Shapes_ConeUp_0.htm'>ConeUp</a></p></td>
+<td><p>Gets the ConeUp predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32703' href='M_MindFusion_Diagramming_Shapes_ConnectedIssues_0.htm'>ConnectedIssues</a></p></td>
+<td><p>Gets the ConnectedIssues predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32704' href='M_MindFusion_Diagramming_Shapes_CreateRequest_0.htm'>CreateRequest</a></p></td>
+<td><p>Gets the CreateRequest predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32705' href='M_MindFusion_Diagramming_Shapes_Cross_0.htm'>Cross</a></p></td>
+<td><p>Gets the Cross predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32706' href='M_MindFusion_Diagramming_Shapes_Cube_0.htm'>Cube</a></p></td>
+<td><p>Gets the Cube predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32707' href='M_MindFusion_Diagramming_Shapes_Cylinder_0.htm'>Cylinder</a></p></td>
+<td><p>Gets the Cylinder predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32708' href='M_MindFusion_Diagramming_Shapes_Database_0.htm'>Database</a></p></td>
+<td><p>Gets the Database predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32709' href='M_MindFusion_Diagramming_Shapes_DataTransmition_0.htm'>DataTransmition</a></p></td>
+<td><p>Gets the DataTransmition predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32710' href='M_MindFusion_Diagramming_Shapes_DDelay_0.htm'>DDelay</a></p></td>
+<td><p>Gets the DDelay predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='20320' href='M_MindFusion_Diagramming_Shapes_Decagon_0.htm'>Decagon</a></p></td>
+<td><p>Gets the Decagon predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32711' href='M_MindFusion_Diagramming_Shapes_Decision_0.htm'>Decision</a></p></td>
+<td><p>Gets the Decision predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32712' href='M_MindFusion_Diagramming_Shapes_Decision2_0.htm'>Decision2</a></p></td>
+<td><p>Gets the Decision2 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32713' href='M_MindFusion_Diagramming_Shapes_DefaultFlow_0.htm'>DefaultFlow</a></p></td>
+<td><p>Gets the DefaultFlow predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32714' href='M_MindFusion_Diagramming_Shapes_Delay_0.htm'>Delay</a></p></td>
+<td><p>Gets the Delay predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32715' href='M_MindFusion_Diagramming_Shapes_DInDelay_0.htm'>DInDelay</a></p></td>
+<td><p>Gets the DInDelay predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32716' href='M_MindFusion_Diagramming_Shapes_DirectAccessStorage_0.htm'>DirectAccessStorage</a></p></td>
+<td><p>Gets the DirectAccessStorage predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32717' href='M_MindFusion_Diagramming_Shapes_DiskStorage_0.htm'>DiskStorage</a></p></td>
+<td><p>Gets the DiskStorage predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32718' href='M_MindFusion_Diagramming_Shapes_Display_0.htm'>Display</a></p></td>
+<td><p>Gets the Display predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32719' href='M_MindFusion_Diagramming_Shapes_DividedEvent_0.htm'>DividedEvent</a></p></td>
+<td><p>Gets the DividedEvent predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32720' href='M_MindFusion_Diagramming_Shapes_DividedProcess_0.htm'>DividedProcess</a></p></td>
+<td><p>Gets the DividedProcess predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32721' href='M_MindFusion_Diagramming_Shapes_Document_0.htm'>Document</a></p></td>
+<td><p>Gets the Document predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='21698' href='M_MindFusion_Diagramming_Shapes_Donut_0.htm'>Donut</a></p></td>
+<td><p>Gets the Donut predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32722' href='M_MindFusion_Diagramming_Shapes_DoubleArrow_0.htm'>DoubleArrow</a></p></td>
+<td><p>Gets the DoubleArrow predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32723' href='M_MindFusion_Diagramming_Shapes_DOutDelay_0.htm'>DOutDelay</a></p></td>
+<td><p>Gets the DOutDelay predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32724' href='M_MindFusion_Diagramming_Shapes_Ellipse_0.htm'>Ellipse</a></p></td>
+<td><p>Gets the Ellipse predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32725' href='M_MindFusion_Diagramming_Shapes_EndLoop_0.htm'>EndLoop</a></p></td>
+<td><p>Gets the EndLoop predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32726' href='M_MindFusion_Diagramming_Shapes_ExternalOrganization_0.htm'>ExternalOrganization</a></p></td>
+<td><p>Gets the ExternalOrganization predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32727' href='M_MindFusion_Diagramming_Shapes_ExternalProcess_0.htm'>ExternalProcess</a></p></td>
+<td><p>Gets the ExternalProcess predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32728' href='M_MindFusion_Diagramming_Shapes_File_0.htm'>File</a></p></td>
+<td><p>Gets the File predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32729' href='M_MindFusion_Diagramming_Shapes_FramedRectangle_0.htm'>FramedRectangle</a></p></td>
+<td><p>Gets the FramedRectangle predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32730' href='M_MindFusion_Diagramming_Shapes_Gate_0.htm'>Gate</a></p></td>
+<td><p>Gets the Gate predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32731' href='M_MindFusion_Diagramming_Shapes_Heart_0.htm'>Heart</a></p></td>
+<td><p>Gets the Heart predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32732' href='M_MindFusion_Diagramming_Shapes_Heptagon_0.htm'>Heptagon</a></p></td>
+<td><p>Gets the Heptagon predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32733' href='M_MindFusion_Diagramming_Shapes_Hourglass_0.htm'>Hourglass</a></p></td>
+<td><p>Gets the Hourglass predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32734' href='M_MindFusion_Diagramming_Shapes_Input_0.htm'>Input</a></p></td>
+<td><p>Gets the Input predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32735' href='M_MindFusion_Diagramming_Shapes_InternalStorage_0.htm'>InternalStorage</a></p></td>
+<td><p>Gets the InternalStorage predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32736' href='M_MindFusion_Diagramming_Shapes_Interrupt_0.htm'>Interrupt</a></p></td>
+<td><p>Gets the Interrupt predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32737' href='M_MindFusion_Diagramming_Shapes_Interrupt2_0.htm'>Interrupt2</a></p></td>
+<td><p>Gets the Interrupt2 predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32738' href='M_MindFusion_Diagramming_Shapes_IsoProcess_0.htm'>IsoProcess</a></p></td>
+<td><p>Gets the IsoProcess predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32739' href='M_MindFusion_Diagramming_Shapes_Junction_0.htm'>Junction</a></p></td>
+<td><p>Gets the Junction predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32740' href='M_MindFusion_Diagramming_Shapes_Lightning_0.htm'>Lightning</a></p></td>
+<td><p>Gets the Lightning predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32741' href='M_MindFusion_Diagramming_Shapes_LinedDocument_0.htm'>LinedDocument</a></p></td>
+<td><p>Gets the LinedDocument predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32742' href='M_MindFusion_Diagramming_Shapes_ManualOperation_0.htm'>ManualOperation</a></p></td>
+<td><p>Gets the ManualOperation predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32743' href='M_MindFusion_Diagramming_Shapes_Merge_0.htm'>Merge</a></p></td>
+<td><p>Gets the Merge predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32744' href='M_MindFusion_Diagramming_Shapes_MessageFromUser_0.htm'>MessageFromUser</a></p></td>
+<td><p>Gets the MessageFromUser predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32745' href='M_MindFusion_Diagramming_Shapes_MessageToUser_0.htm'>MessageToUser</a></p></td>
+<td><p>Gets the MessageToUser predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32746' href='M_MindFusion_Diagramming_Shapes_Microform_0.htm'>Microform</a></p></td>
+<td><p>Gets the Microform predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32747' href='M_MindFusion_Diagramming_Shapes_MicroformProcessing_0.htm'>MicroformProcessing</a></p></td>
+<td><p>Gets the MicroformProcessing predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32748' href='M_MindFusion_Diagramming_Shapes_MicroformRecording_0.htm'>MicroformRecording</a></p></td>
+<td><p>Gets the MicroformRecording predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32749' href='M_MindFusion_Diagramming_Shapes_MultiDocument_0.htm'>MultiDocument</a></p></td>
+<td><p>Gets the MultiDocument predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32750' href='M_MindFusion_Diagramming_Shapes_MultiProc_0.htm'>MultiProc</a></p></td>
+<td><p>Gets the MultiProc predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32751' href='M_MindFusion_Diagramming_Shapes_Octagon_0.htm'>Octagon</a></p></td>
+<td><p>Gets the Octagon predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32752' href='M_MindFusion_Diagramming_Shapes_OfflineStorage_0.htm'>OfflineStorage</a></p></td>
+<td><p>Gets the OfflineStorage predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32753' href='M_MindFusion_Diagramming_Shapes_OffpageConnection_0.htm'>OffpageConnection</a></p></td>
+<td><p>Gets the OffpageConnection predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32754' href='M_MindFusion_Diagramming_Shapes_OffpageReference_0.htm'>OffpageReference</a></p></td>
+<td><p>Gets the OffpageReference predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32755' href='M_MindFusion_Diagramming_Shapes_Or_0.htm'>Or</a></p></td>
+<td><p>Gets the Or predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32756' href='M_MindFusion_Diagramming_Shapes_Pentagon_0.htm'>Pentagon</a></p></td>
+<td><p>Gets the Pentagon predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32757' href='M_MindFusion_Diagramming_Shapes_PentagonArrow_0.htm'>PentagonArrow</a></p></td>
+<td><p>Gets the PentagonArrow predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='27556' href='M_MindFusion_Diagramming_Shapes_Plaque_0.htm'>Plaque</a></p></td>
+<td><p>Gets the Plaque predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32758' href='M_MindFusion_Diagramming_Shapes_PointerArrow_0.htm'>PointerArrow</a></p></td>
+<td><p>Gets the PointerArrow predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32759' href='M_MindFusion_Diagramming_Shapes_PrimitiveFromCall_0.htm'>PrimitiveFromCall</a></p></td>
+<td><p>Gets the PrimitiveFromCall predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32760' href='M_MindFusion_Diagramming_Shapes_PrimitiveToCall_0.htm'>PrimitiveToCall</a></p></td>
+<td><p>Gets the PrimitiveToCall predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32761' href='M_MindFusion_Diagramming_Shapes_Procedure_0.htm'>Procedure</a></p></td>
+<td><p>Gets the Procedure predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32762' href='M_MindFusion_Diagramming_Shapes_Process_0.htm'>Process</a></p></td>
+<td><p>Gets the Process predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32763' href='M_MindFusion_Diagramming_Shapes_Prysm_0.htm'>Prysm</a></p></td>
+<td><p>Gets the Prysm predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32764' href='M_MindFusion_Diagramming_Shapes_PunchedCard_0.htm'>PunchedCard</a></p></td>
+<td><p>Gets the PunchedCard predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32765' href='M_MindFusion_Diagramming_Shapes_PyramidDown_0.htm'>PyramidDown</a></p></td>
+<td><p>Gets the PyramidDown predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32766' href='M_MindFusion_Diagramming_Shapes_PyramidUp_0.htm'>PyramidUp</a></p></td>
+<td><p>Gets the PyramidUp predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32767' href='M_MindFusion_Diagramming_Shapes_Quill_0.htm'>Quill</a></p></td>
+<td><p>Gets the Quill predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32768' href='M_MindFusion_Diagramming_Shapes_Rectangle_0.htm'>Rectangle</a></p></td>
+<td><p>Gets the Rectangle predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32769' href='M_MindFusion_Diagramming_Shapes_Reversed_0.htm'>Reversed</a></p></td>
+<td><p>Gets the Reversed predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32770' href='M_MindFusion_Diagramming_Shapes_RevTriangle_0.htm'>RevTriangle</a></p></td>
+<td><p>Gets the RevTriangle predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32771' href='M_MindFusion_Diagramming_Shapes_RevWithCirc_0.htm'>RevWithCirc</a></p></td>
+<td><p>Gets the RevWithCirc predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32772' href='M_MindFusion_Diagramming_Shapes_RevWithLine_0.htm'>RevWithLine</a></p></td>
+<td><p>Gets the RevWithLine predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32773' href='M_MindFusion_Diagramming_Shapes_Rhombus_0.htm'>Rhombus</a></p></td>
+<td><p>Gets the Rhombus predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='27557' href='M_MindFusion_Diagramming_Shapes_RightTriangle_0.htm'>RightTriangle</a></p></td>
+<td><p>Gets the RightTriangle predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32774' href='M_MindFusion_Diagramming_Shapes_RoundRect_0.htm'>RoundRect</a></p></td>
+<td><p>Gets the RoundRect predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32775' href='M_MindFusion_Diagramming_Shapes_RSave_0.htm'>RSave</a></p></td>
+<td><p>Gets the RSave predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32776' href='M_MindFusion_Diagramming_Shapes_Save_0.htm'>Save</a></p></td>
+<td><p>Gets the Save predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32777' href='M_MindFusion_Diagramming_Shapes_Slash_0.htm'>Slash</a></p></td>
+<td><p>Gets the Slash predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32778' href='M_MindFusion_Diagramming_Shapes_Sort_0.htm'>Sort</a></p></td>
+<td><p>Gets the Sort predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32779' href='M_MindFusion_Diagramming_Shapes_Sphere_0.htm'>Sphere</a></p></td>
+<td><p>Gets the Sphere predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32780' href='M_MindFusion_Diagramming_Shapes_Star_0.htm'>Star</a></p></td>
+<td><p>Gets the Star predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='27566' href='M_MindFusion_Diagramming_Shapes_Star16Pointed_0.htm'>Star16Pointed</a></p></td>
+<td><p>Gets the Star16Pointed predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='27567' href='M_MindFusion_Diagramming_Shapes_Star24Pointed_0.htm'>Star24Pointed</a></p></td>
+<td><p>Gets the Star24Pointed predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='27597' href='M_MindFusion_Diagramming_Shapes_Star32Pointed_0.htm'>Star32Pointed</a></p></td>
+<td><p>Gets the Star32Pointed predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='27598' href='M_MindFusion_Diagramming_Shapes_Star4Pointed_0.htm'>Star4Pointed</a></p></td>
+<td><p>Gets the Star4Pointed predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='27614' href='M_MindFusion_Diagramming_Shapes_Star5Pointed_0.htm'>Star5Pointed</a></p></td>
+<td><p>Gets the Star5Pointed predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='27615' href='M_MindFusion_Diagramming_Shapes_Star6Pointed_0.htm'>Star6Pointed</a></p></td>
+<td><p>Gets the Star6Pointed predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='29675' href='M_MindFusion_Diagramming_Shapes_Star7Pointed_0.htm'>Star7Pointed</a></p></td>
+<td><p>Gets the Star7Pointed predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32781' href='M_MindFusion_Diagramming_Shapes_Start_0.htm'>Start</a></p></td>
+<td><p>Gets the Start predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32782' href='M_MindFusion_Diagramming_Shapes_Tape_0.htm'>Tape</a></p></td>
+<td><p>Gets the Tape predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32783' href='M_MindFusion_Diagramming_Shapes_Terminator_0.htm'>Terminator</a></p></td>
+<td><p>Gets the Terminator predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32784' href='M_MindFusion_Diagramming_Shapes_Tetragon_0.htm'>Tetragon</a></p></td>
+<td><p>Gets the Tetragon predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32785' href='M_MindFusion_Diagramming_Shapes_TransmittalTape_0.htm'>TransmittalTape</a></p></td>
+<td><p>Gets the TransmittalTape predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='31579' href='M_MindFusion_Diagramming_Shapes_Trapezoid_0.htm'>Trapezoid</a></p></td>
+<td><p>Gets the Trapezoid predefined shape.</p></td>
+</tr>
+<tr>
+<td><img src='method.png' title='Public Method' align='absmiddle' /><img src='static.png' title='Static' align='absmiddle' /></td>
+<td><p><a id='32786' href='M_MindFusion_Diagramming_Shapes_Triangle_0.htm'>Triangle</a></p></td>
+<td><p>Gets the Triangle predefined shape.</p></td>
+</tr>
+</table>
+</div>
+<h2><span id='SeeAlso' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SeeAlsoImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;See Also</span></h2><div id='SeeAlsoSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p><a id='32438' href='CC_T_MindFusion_Diagramming_Shapes_0.htm' title=''>Shapes Class</a><br/><a id='32253' href='CC_N_MindFusion_Diagramming_0.htm' title=''>MindFusion.Diagramming Namespace</a></p>
+</div>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

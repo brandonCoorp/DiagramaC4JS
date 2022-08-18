@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='51520' />
+<title>Tutorial 4: Custom Nodes Integration</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Tutorial 4: Custom Nodes Integration</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p>This tutorial builds upon the OrgChartNode type from <a id='51519' href='Tutorial_3_0.htm' title=''>Tutorial 3</a>. It shows how to fully integrate the custom type with other <span>MindFusion.Diagramming for JavaScript</span>&#160;features, such as clipboard support, undo support, creating nodes by drag-and-drop or drawing with the mouse on the canvas.</p><p>1. Create copies of&#160;<span class='repeatingLink'>Tutorial 3</span> files - Tutorail3.html and Tutorial3.js and name them Tuturial4.html and Tutorial4.js respectively.</p><p>2.&#160;Add a DIV and CANVAS elements to Tutorial4.html that will represent a <a id='32519' href='T_MindFusion_Diagramming_NodeListView.htm' title=''>NodeListView</a> control:</p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>HTML</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>&lt;!-- The NodeListView component is bound to the canvas element below --&gt;<br/>&lt;div style="width: 250px; height: 500px; overflow: auto; border: 1px solid black;"&gt;<br/><br/>&lt;canvas id="nodeListView" width="62" height="70"&gt;<br/>&#160;&#160;&#160; This page requires a browser that supports HTML 5 Canvas element.<br/>&lt;/canvas&gt;<br/><br/>&lt;/div&gt;</p></td></tr></table></p><p>3. Add five buttons to the page -&#160;copy, cut, paste, undo and redo - and define click handlers that will be used to call the corresponding diagram methods.</p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>HTML</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>&lt;button onclick="diagram.copyToClipboard()"&gt;copy&lt;/button&gt;<br/>&lt;button onclick="diagram.cutToClipboard()"&gt;cut&lt;/button&gt;<br/>&lt;button onclick="diagram.pasteFromClipboard(5, 5)"&gt;paste&lt;/button&gt;<br/>&lt;button onclick="diagram.undo()"&gt;undo&lt;/button&gt;<br/>&lt;button onclick="diagram.redo()"&gt;redo&lt;/button&gt;</p></td></tr></table></p><p>4. Add shortcuts to the <span class='repeatingLink'>NodeListView</span> and <a id='32805' href='T_MindFusion_Drawing_Size.htm' title=''>Size</a> classes in Tutorial4.js and define a nodeListView variable.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var NodeListView = MindFusion.Diagramming.NodeListView;<br/><br/>var Size = MindFusion.Drawing.Size;<br/><br/>var nodeListView = null;</p></td></tr></table></p><p>5. Classes generated by calling <a id='57997' href='M_MindFusion_Diagramming_CompositeNode_classFromTemplate_2_String_Object.htm' title=''>classFromTemplate</a> implement undo/redo, clipboard and&#160;serialization support for&#160;their auto-properties out of the box. When creating more complex types with their own data properties, you'd need to implement serialization&#160;and cloning&#160;for them yourself.&#160;Lets show how to implement the various operations by creating a new class that adds a custom property. Start by renaming the class from tutorial 3 to TemplatedBase, and creating a new OrgChartNode class that derives from it.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var TemplatedBase = CompositeNode.classFromTemplate("TemplatedBase",<br/>&#160;&#160;&#160; // ...<br/><br/>var OrgChartNode = function (parent)<br/>{<br/>&#160;&#160;&#160; AbstractionLayer.initializeBase(OrgChartNode, this, [parent]);<br/>&#160;&#160;&#160; this.cost = "low";<br/>};</p><p>OrgChartNode.prototype =<br/>{<br/>&#160;&#160;&#160; getCost: function ()<br/>&#160;&#160;&#160; {<br/>&#160;&#160;&#160; &#160;&#160;&#160; return this.cost;<br/>&#160;&#160;&#160; },<br/><br/>&#160;&#160;&#160; setCost: function (value)<br/>&#160;&#160;&#160; {<br/>&#160;&#160;&#160; &#160;&#160;&#160; this.cost = value;<br/>&#160;&#160;&#160; }<br/>}<br/><br/>AbstractionLayer.registerClass(<br/>&#160;&#160;&#160; OrgChartNode, "OrgChartNode", TemplatedBase);</p></td></tr></table></p><p>6.&#160;Add a clone method override to the OrgChartNode prototype.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>// support for the NodeListView drag'n'drop<br/>clone: function ()<br/>{<br/>&#160;&#160;&#160; var copy = AbstractionLayer.callBaseMethod(<br/>&#160;&#160;&#160; &#160;&#160;&#160; OrgChartNode, this, "clone", []);<br/>&#160;&#160;&#160; copy.cost = this.cost;<br/>&#160;&#160;&#160; return copy;<br/>},</p></td></tr></table></p><p>7. To implement&#160;clipboard support&#160;of any new properties added by a custom item class,&#160;add&#160;<b>fromJson</b> and <b>toJson</b>&#160;method overrides to the prototype definition:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>// clipboard and serialization support<br/>toJson: function ()<br/>{<br/>&#160;&#160;&#160; var json = AbstractionLayer.callBaseMethod(<br/>&#160;&#160;&#160; &#160;&#160;&#160; OrgChartNode, this, "toJson", []);<br/>&#160;&#160;&#160; json.cost = this.cost;<br/>&#160;&#160;&#160; return json;<br/>},<br/><br/>fromJson: function (json)<br/>{<br/>&#160;&#160;&#160; AbstractionLayer.callBaseMethod(<br/>&#160;&#160;&#160; &#160;&#160;&#160; OrgChartNode, this, "fromJson", [json]);<br/>&#160;&#160;&#160; this.cost = json.cost;<br/>},</p></td></tr></table></p><p>8. In order to enable undo / redo of changes done on OrgChartNode, add&#160;saveState and&#160;restoreState method overrides to the prototype definition:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>// undo/redo<br/>saveState: function ()<br/>{<br/>&#160;&#160;&#160; var state = AbstractionLayer.callBaseMethod(<br/>&#160;&#160;&#160; &#160;&#160;&#160; OrgChartNode, this, "saveState", []);<br/>&#160;&#160;&#160; state.cost = this.cost;<br/>&#160;&#160;&#160; return state;<br/>},<br/><br/>restoreState: function (state)<br/>{<br/>&#160;&#160;&#160; AbstractionLayer.callBaseMethod(<br/>&#160;&#160;&#160; &#160;&#160;&#160; OrgChartNode, this, "restoreState", [state]);<br/>&#160;&#160;&#160; this.cost = state.cost;<br/>}</p></td></tr></table></p><p>9. In order to enable drawing OrgChartNodes with the mouse, add the following code to the&#160;document.ready handler:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>// enable drawing of custom nodes interactively<br/>diagram.setCustomNodeType(OrgChartNode);<br/>diagram.setBehavior(Behavior.Custom);</p></td></tr></table></p><p>10. To enable undo / redo support on the <a id='32377' href='CC_T_MindFusion_Diagramming_Diagram_0.htm' title=''>Diagram</a> object, set its undoEnabled property to <b>true</b> in the document.ready handler.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td>// enable undo/redo support<br/>diagram.setUndoEnabled(true);</td></tr></table></p><p>11. Finally, add initialization code for the&#160; <span class='repeatingLink'>NodeListView</span> to the load hadler.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>// create a NodeListView component that wraps the "nodeListView" canvas<br/>nodeListView = NodeListView.create($("#nodeListView")[0]);<br/>nodeListView.setMeasureUnit(6);<br/>nodeListView.setPadding(1);<br/>nodeListView.setIconSize(new Size(65, 25));<br/>nodeListView.setDefaultNodeSize(new Size(65, 25));<br/><br/>// create and add some nodes to the node list<br/>var node1 = new OrgChartNode(nodeListView);<br/>node1.setTitle("Skiing");<br/>node1.setFullName("Winter");<br/>node1.setDetails(<br/>&#160;"Vacation in the snow. \r\n" +<br/>&#160;"Ski lessons, ski equipment and winter sports.");<br/>node1.setImage("snowman.png");<br/>node1.setCost("high");<br/>nodeListView.addNode(node1, "");<br/><br/>var node2 = new OrgChartNode(nodeListView);<br/>node2.setTitle("Seaside");<br/>node2.setFullName("Summer");<br/>node2.setDetails("Sun bathing, swimming, catching tan.");<br/>node2.setImage("seaside.png");<br/>node2.setCost("high");<br/>nodeListView.addNode(node2, "");</p></td></tr></table></p><p>12. Publish JQuery.js, MindFusion.Diagramming.js and the tutorial files using web server of your choice. Open Tutorial4.html in a web browser and you should be able to create nodes by drag and drop from NodeListView, copy and paste them, and redo/undo operations done on them.</p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

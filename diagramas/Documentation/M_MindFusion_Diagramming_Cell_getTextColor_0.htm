@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='11893' />
+<title>MindFusion.Diagramming.Cell.getTextColor Method</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style=''><span class='title'>Cell.getTextColor Method</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE; padding: 2pt 5pt 4pt 12pt;'><span><a id='' href='#SeeAlso'>See Also</a> </span></td>
+</tr>
+<tr>
+<td style='height: 19px; border-top: solid 1px #FFFFFF; border-bottom: solid 1px #C8CDDE; padding: 0pt 0pt 0pt 12pt;'>
+<span style='cursor: default' onkeypress='ExpandCollapseAll_CheckKey(toggleAllImage);' onclick='ExpandCollapseAll(toggleAllImage);'>
+<img src='collapsesmall.png' title='CollapseAll image' id='toggleAllImage' />
+<label style='display: none;' id='collapseAllLabel' for='toggleAllImage'>
+Collapse All
+</label>
+<label style='display: none;' id='expandAllLabel' for='toggleAllImage'>
+Expand All
+</label>
+&#160;</span>
+<span id='languageFilterToolTip' style='cursor: default;' onmouseover='languageFilterImage.src=dropDownHoverImage.src;' onmouseout='languageFilterImage.src=dropDownImage.src;' >
+<img src='arrow.png' title='DropDown image' id='languageFilterImage' />
+<label id='showAllLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: All
+</label>
+<label id='multipleLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: Multiple
+</label>
+<label id='noneLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: None
+</label>
+<label id='csLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: C#
+</label>
+<label id='vbLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: Visual Basic
+</label>
+<label id='javaLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: Java
+</label>
+<label id='jsLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: JavaScript
+</label>
+<label id='xamlLabel' for='languageFilterImage' style='display: none;'>
+Language Filter: XAML
+</label>
+</span>
+</td>
+</tr>
+</table>
+<div id='languageSpan'>
+<input id='csCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='csCheckbox'>C#</label> <br />
+<input id='vbLangCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='vbLangCheckbox'>Visual Basic</label> <br />
+<input id='javaCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='javaCheckbox'>Java</label> <br />
+<input id='jsCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='jsCheckbox'>JavaScript</label> <br />
+<input id='xamlCheckbox' onclick='SetLanguage(this);' type='checkbox' name='languageFilter' />
+<label class='languageFilter' for='xamlCheckbox'>XAML</label> <br />
+</div>
+</div>
+<div id='nstext'>
+<p>Gets a string specifying the color of the text of this cell.</p>
+<p><b>Namespace:</b> <a id='32253' href='CC_N_MindFusion_Diagramming_0.htm' title=''>MindFusion.Diagramming</a><br/><b><span>File</span>:</b> Cell.js</p>
+<h2><span id='Syntax' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SyntaxImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;Syntax</span></h2><div id='SyntaxSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>function getTextColor ()</p></td></tr></table>
+<h3><span id='ReturnValue' style='cursor: default;' tabindex='0'>&#160;Return Value</span></h3><div id='ReturnValueSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p>A string value identifying the color of the text.</p></div>
+</div>
+
+<h2><span id='SeeAlso' onclick='ExpandCollapse(this);' onkeypress='ExpandCollapse_CheckKey(event, this);' style='cursor: default;' tabindex='0'><img src='collapse.png' title='Collapse Section' id='SeeAlsoImage' style='vertical-align: 2px;' name='toggleSwitch' />&#160;See Also</span></h2><div id='SeeAlsoSection' style='padding-left: 12pt; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+<p><a id='4277' href='T_MindFusion_Diagramming_Cell_Members.htm' title=''>Cell Members</a><br/><a id='4276' href='T_MindFusion_Diagramming_Cell.htm' title=''>Cell Class</a><br/><a id='32253' href='CC_N_MindFusion_Diagramming_0.htm' title=''>MindFusion.Diagramming Namespace</a></p>
+</div>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

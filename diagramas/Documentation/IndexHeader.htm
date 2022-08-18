@@ -1,0 +1,171 @@
+<html>
+<head>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all'>
+<script src='oscript.js' language='javascript' type='text/javascript'> </script>
+<script src='prototype.js' language='javascript' type='text/javascript'> </script>
+<script language='javascript' type='text/javascript'>
+<!--
+function gwh(win, doc)
+{
+	return ggwh(win, doc, 2 * 4 + 2 + 1);
+}
+
+function x()
+{
+	var main = document.getElementById('headingMain');
+	main.style.height = gwh(window, document);
+	if (navigator.appName == "Microsoft Internet Explorer")
+	{
+		var searchBtn = document.getElementById('searchBtn');
+		searchBtn.style.verticalAlign = '2px';
+	}
+}
+
+function hm()
+{
+	window.parent.location = 'http://mindfusion.eu/';
+}
+
+function mv(o)
+{
+	o.style.border = '1px dotted #6699ff';
+	o.style.padding = '1px 1px 1px 0px';
+	o.style.backgroundColor = '#cfdaff';
+}
+
+function mt(o)
+{
+	o.style.border = '';
+	o.style.padding = '2px 2px 2px 1px';
+	o.style.backgroundColor = '';
+}
+
+var done = false;
+var started = false;
+var found = "";
+var foundUrl = "";
+
+function sf()
+{
+	var searchFor = document.getElementById('searchFor');
+	var sf = searchFor.value;
+	if (sf == null || sf == '')
+		return;
+
+	var contentsFrame = window.parent.document.getElementById('contentsFrame');
+	var contentsFrameDoc = contentsFrame.contentWindow.document;
+	var tocFrame = contentsFrameDoc.getElementById('tocFrame');
+	var tocFrameDoc = tocFrame.contentWindow.document;
+
+	var topicFrame = contentsFrameDoc.getElementById('topicFrame');
+	var topicFrameDoc = topicFrame.contentWindow.document;
+	var metaTag = topicFrameDoc.getElementById('metaFileNameId');
+
+	if (metaTag == null)
+		return;
+
+	var id = "id" + metaTag.content;
+
+	started = false;
+	done = false;
+	found = "";
+	foundUrl = "";
+	sfin(tocFrameDoc, tocFrameDoc.firstChild, id, sf.toLowerCase());
+
+	if (!done)
+	{
+		alert("'" + sf + "' was not found.");
+	}
+	else
+	{
+		topicFrame.src = foundUrl;
+	}
+}
+
+function sfin(doc, node, selected, sf)
+{
+	if (done)
+		return;
+
+	if (node == null)
+		return;
+
+	if (node.nodeName == "DIV")
+	{
+		if (!started)
+		{
+			if (node.id == selected)
+				started = true;
+		}
+		else
+		{
+			if (node.id.indexOf("id") == 0)
+			{
+				var sid = "s" + node.id;
+				var snode = doc.getElementById(sid);
+				var snodeText = snode.firstChild.firstChild;
+				if (snodeText.nodeName == "#text")
+				{
+					var pos = snodeText.nodeValue.toLowerCase().indexOf(sf);
+					if (pos != -1)
+					{
+						var attr = snode.attributes.getNamedItem('onClick');
+						if (attr != null)
+						{
+							var attrValue = attr.nodeValue;
+							var firstQuot = attrValue.indexOf("mn('");
+							var secondQuot = attrValue.lastIndexOf("'");
+							if (firstQuot != -1 && secondQuot != -1)
+							{
+								foundUrl = attrValue.substring(firstQuot + 4, secondQuot);
+								foundUrl = foundUrl.replace(/\\\'/g, "'");
+								foundUrl = foundUrl.replace(/\\\"/g, "\"");
+							}
+						}
+
+						found = node.id;
+						done = true;
+					}
+				}
+			}
+		}
+	}
+
+	if (!done)
+		sfin(doc, node.firstChild, selected, sf);
+
+	if (!done)
+		sfin(doc, node.nextSibling, selected, sf);
+}
+-->
+</script>
+</head>
+<body id='headingBody' onload='x();'>
+
+<div id='headingMain'>
+
+<table id='heading' cellspacing='0'>
+<tr>
+<td style='padding: 0px 0px 2px 10px; border-bottom: 1px solid #e0e0e0;' colspan='2'>
+<span class='headingTitle'>JsDiagram Online Documentation</span>
+</td>
+<td align='right' rowspan='2' width='230px'><a target='_top' href='http://mindfusion.eu/'><img src='logo.png' title='MindFusion' style='padding-top: 6px;' /></a></td>
+</tr>
+<tr>
+<td style='padding: 5px 0px 0px 10px;' width='250px' nowrap='nowrap'>
+<span class='button' onmouseover='mv(this);' onmouseout='mt(this);' onclick='hm();' title='Go to the MindFusion homepage.'><img src='home.png' /> Home</span>
+<span class='button' onmouseover='mv(this);' onmouseout='mt(this);' onclick='glt();' title='Locate the currently displayed topic in the table of contents.'><img src='sync.png' /> Locate</span>
+</td>
+<td nowrap='nowrap'>
+<form method='post' action='swish.cgi' id='searchForm' target='topicFrameName'>
+<input name='query' id='searchFor' type='text'>
+<span id='searchBtn' class='button' onmouseover='mv(this)' onmouseout='mt(this)' onclick='document.getElementById("searchForm").submit()' title='Search'><img src='search.png' /> Search</span>
+</form>
+</td>
+</tr>
+</table>
+
+</div>
+
+</body>
+</html>

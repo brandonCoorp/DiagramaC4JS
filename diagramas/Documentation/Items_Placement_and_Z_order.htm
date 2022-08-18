@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='50533' />
+<title>Items Placement and Z-order</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Items Placement and Z-order</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p><h2>Measure Unit</h2>The <a id='1765' href='M_MindFusion_Drawing_Canvas_setMeasureUnit_1_MeasureUnit.htm' title=''>MeasureUnit</a> property specifies the unit of measure for all location and size-related values assigned to&#160;JsDiagram properties or passed as arguments to its methods.<h2>Location and Size of Nodes</h2>Call the <a id='32298' href='M_MindFusion_Diagramming_DiagramNode_setBounds_2_Rect_Boolean.htm' title=''>setBounds</a>&#160;method to change the location and size of a node. The method takes a <a id='32547' href='T_MindFusion_Drawing_Rect.htm' title=''>Rect</a> instance as argument. Call <a id='32285' href='M_MindFusion_Diagramming_DiagramNode_getBounds_0.htm' title=''>getBounds</a> to find the current location and size of a node, returned&#160;as a <span class='repeatingLink'>Rect</span> object.<h2>Links Control Points</h2>Links must have two or more control points, depending on their <a id='32468' href='M_MindFusion_Diagramming_DiagramLink_setShape_1_LinkShape.htm' title=''>Shape</a> property. You can get access to the control points via link's <a id='32451' href='M_MindFusion_Diagramming_DiagramLink_getControlPoints_0.htm' title=''>ControlPoints</a> collection. You must call <a id='35399' href='CC_M_MindFusion_Diagramming_DiagramLink_updateFromPoints_0_0.htm' title=''>updateFromPoints</a> after programmatically moving control points of a link; that's needed in order to repaint the link and update its internal state variables, such as arrowhead angles.<h2>Link Dynamics</h2>The <a id='49772' href='M_MindFusion_Diagramming_DiagramLink_setDynamic_1_Boolean.htm' title=''>Dynamic</a> property of a link can be enabled to make the link automatically recalculate its end point positions if the nodes connected to the link are moved or resized; the end points are moved in such a way that the link points to the centers of the connected nodes. Links also&#160;expose an <a id='34097' href='M_MindFusion_Diagramming_DiagramLink_setAutoRoute_1_Boolean.htm' title=''>AutoRoute</a> property that enables or disables automatic routing&#160;for a link. Routed links avoid nodes by finding the shortest path between their origin and destination that does not cross any other nodes.<h2>Interactive Moving or Resizing</h2>End-users of your application can move or resize the diagram elements. They do this by selecting an item and dragging any of its adjustment handles, a point inside its interior, any of its sides or a selection frame. The <a id='50315' href='M_MindFusion_Diagramming_DiagramNode_setHandlesStyle_1_AdjustmentHandles.htm' title=''>HandlesStyle</a> property of nodes controls how interaction can be performed. Additionally it defines the representation of selected items on screen. <a id='32299' href='M_MindFusion_Diagramming_DiagramNode_setEnabledHandles_1_AdjustmentHandles.htm' title=''>EnabledHandles</a> lets you disable specific manipulations users are allowed to perform on a node, for example resizing the item horizontally or moving it. If an item is modified interactively, the <a id='34119' href='F_MindFusion_Diagramming_Events_nodeModified.htm' title=''>nodeModified</a> or <a id='34114' href='F_MindFusion_Diagramming_Events_linkModified.htm' title=''>linkModified</a> event is raised, depending on the item's type.<h2>Controlling Z-order</h2>The Z-order defines how items are ordered along the Z-axis, so that one item appears in front of or behind another one. Diagram items are sorted by the value of their <a id='32339' href='M_MindFusion_Diagramming_DiagramItem_getZIndex_0.htm' title=''>ZIndex</a> property, and&#160;rendered on screen in ascending order. You can change the Z index of a <a id='32324' href='CC_T_MindFusion_Diagramming_DiagramItem_0.htm' title=''>DiagramItem</a> by calling its <a id='32794' href='M_MindFusion_Diagramming_DiagramItem_setZIndex_1_Number.htm' title=''>setZIndex</a> method.</p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

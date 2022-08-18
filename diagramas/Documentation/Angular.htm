@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='94823' />
+<title>Angular</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Angular</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p>The DiagramView&#160;Angular component (diagram-view selector) allows integrating the MindFusion.Diagramming API into Angular applications. It renders a <a id='32377' href='CC_T_MindFusion_Diagramming_Diagram_0.htm' title=''>Diagram</a> instance assigned to "diagram" property as its model.</p><p>At this time the following properties can be set from HTML&#160;templates too: <a id='32423' href='M_MindFusion_Diagramming_Diagram_setAllowInplaceEdit_1_Boolean.htm' title=''>allowInplaceEdit</a>, <a id='51561' href='M_MindFusion_Diagramming_Diagram_setAutoResize_1_AutoResize.htm' title=''>autoResize</a>, <a id='32424' href='M_MindFusion_Diagramming_Diagram_setBackBrush_1_void.htm' title=''>backBrush</a>, <a id='37967' href='M_MindFusion_Diagramming_Diagram_setBehavior_1_Behavior.htm' title=''>behavior</a>, <a id='32425' href='M_MindFusion_Diagramming_Diagram_setDefaultShape_1_Shape.htm' title=''>defaultShape</a>, <a id='32427' href='M_MindFusion_Diagramming_Diagram_setEnabled_1_Boolean.htm' title=''>enabled</a>, <a id='32433' href='M_MindFusion_Diagramming_Diagram_setLinkHeadShapeSize_1_Number.htm' title=''>linkHeadShapeSize</a>, <a id='12892' href='M_MindFusion_Diagramming_Diagram_setLinkShape_1_LinkShape.htm' title=''>linkShape</a>, <a id='16861' href='M_MindFusion_Diagramming_Diagram_setRoundedLinks_1_Boolean.htm' title=''>roundedLinks</a>, <a id='34093' href='M_MindFusion_Diagramming_Diagram_setRouteLinks_1_Boolean.htm' title=''>routeLinks</a>, <a id='35393' href='M_MindFusion_Diagramming_Diagram_setShowAnchors_1_ShowAnchors.htm' title=''>showAnchors</a>, <a id='35396' href='M_MindFusion_Diagramming_Diagram_setShowGrid_1_Boolean.htm' title=''>showGrid</a>. All diagram events can be handled through event binding syntax as well:</p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>app.module.ts</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>import {AngularDiagram} from 'diagram-library-angular';</p></td></tr></table></p><p><br/></p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>app.component.html</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>&lt;diagram-view<br/>&#160;&#160;&#160; [id] = "'diagram_id'"<br/>&#160;&#160;&#160; [diagram] = "diagram"<br/>&#160;&#160;&#160; [allowInplaceEdit] = "true"<br/>&#160;&#160;&#160; [Enabled] = "true"<br/>&#160;&#160;&#160; [RoundedLinks] = "true"<br/>&#160;&#160;&#160; [RouteLinks] = "true"<br/>&#160;&#160;&#160; [ShowGrid] = "true" <br/>&#160;&#160;&#160; [BackBrush] = "'blue'"<br/>&#160;&#160;&#160; [DefaulShape] = "'Actor'"<br/>&#160;&#160;&#160; [AutoResize]&#160; = "autoResize"<br/>&#160;&#160;&#160; [Behavior] = "behavior"<br/>&#160;&#160;&#160; (onNodeCreated) = "nodeCreated($event)"<br/>&#160;&#160;&#160; (onNodeTextEdited) = "textEdited($event)"<br/>&#160;&#160;&#160; (onNodeDoubleClicked) = "nodeDoubleClicked($event)"<br/>&#160;&#160;&#160; (onLinkClicked) = "linkClicked($event)" &gt;<br/>&lt;/diagram-view&gt;</p></td></tr></table></p><p><table class='syntax' cellspacing='0'><tr><th><span style='float: left;'>app.component.ts</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>import * as Common from "mindfusion-common";<br/>import * as MindFusion from 'diagram-library';<br/>import AutoResize = MindFusion.Diagramming.AutoResize;<br/>import Behavior = MindFusion.Diagramming.Behavior;<br/>import Diagram = MindFusion.Diagramming.Diagram;<br/>...<br/>// declare properties<br/>autoResize = AutoResize.None;<br/>behavior = Behavior.DrawShapes;<br/>diagram : Diagram;<br/>...<br/>// instantiate a Diagram model<br/>this.diagram = new Diagram();</p></td></tr></table></p><p>DiagramView can be installed from the diagram-library-angular package on npm:</p><p><i>npm i diagram-library-angular</i></p><p>Several&#160;Angular examples are included in JsDiagram's distribution. In order to run them, execute the following npm commands from command line in Samples/Angular folder:</p><p><i>npm install</i><br/><i>npm start</i><br/></p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

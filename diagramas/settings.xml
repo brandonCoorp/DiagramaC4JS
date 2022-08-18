@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BackgroundColor>#FFAAAAC8</BackgroundColor>
+  <OutlineColor>#FFDCDCFF</OutlineColor>
+  <GridColor>#FF000000</GridColor>
+  <DecorationColor>#FF80FF80</DecorationColor>
+  <TextAreaContourColor>#64B4B464</TextAreaContourColor>
+  <MainContourColor>#64DCDCFF</MainContourColor>
+  <SelectionColor>#FFFFFF00</SelectionColor>
+  <ShapeSize>200</ShapeSize>
+  <GridSpacing>10</GridSpacing>
+  <ShowGrid>false</ShowGrid>
+</Settings>

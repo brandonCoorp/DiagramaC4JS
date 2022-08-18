@@ -1,0 +1,481 @@
+<html>
+<head>
+	<title>Animations</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link type="text/css" href="xstyle.css" rel="stylesheet" media="all">
+	<script src="script.js" type="text/javascript"> </script>
+	<style media="screen" type="text/css">
+		body
+		{
+			visibility: hidden;
+		}
+	</style>
+	<script src="script.js" type="text/javascript"> </script>
+</head>
+<body style="margin: 0px; visibility: visible;">
+	<img src="collapse.png" title="Collapse Section" id="collapseImage" style="display: none; height: 0; width: 0;" />
+	<img src="expand.png" title="Expand Section" id="expandImage" style="display: none; height: 0; width: 0;" />
+	<img src="collapsesmall.png" title="Collapse All" id="collapseAllImage" style="display: none; height: 0; width: 0;" />
+	<img src="expandsmall.png" title="Expand All" id="expandAllImage" style="display: none; height: 0; width: 0;" />
+	<input type="hidden" id="userDataCache" class="userDataStyle" />
+	<img src="arrow.png" title="DropDown image" id="dropDownImage" style="display: none; height: 0; width: 0;" />
+	<img src="arrowh.png" title="DropDown image" id="dropDownHoverImage" style="display: none; height: 0; width: 0;" />
+	<img src="copycode.png" title="Copy Code" id="copyCodeImage" style="display: none; height: 0; width: 0;" />
+	<img src="copycodeh.png" title="Copy Code" id="copyCodeHoverImage" style="display: none; height: 0; width: 0;">
+	<div style="left: 0; padding: 0; position: relative; right: 0;">
+		<table class="bannerparthead" cellspacing="0">
+			<tbody>
+				<tr>
+					<td><span class="gtitle">MindFusion.Diagramming Programmer's Guide</span></td>
+				</tr>
+				<tr>
+					<td style="border-bottom: solid 1px #C8CDDE;">
+						<span class="title">Animations</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="nstext">
+		<p></p>
+		<h2>Animating Diagram Items</h2>
+		<p>To animate a <a href="CC_T_MindFusion_Diagramming_DiagramItem_0.htm">DiagramItem</a>, instantiate a new <a href="T_MindFusion_Animations_Animation.htm">Animation</a> object specifying it&#39;s properties and call the <a href="M_MindFusion_Animations_Animation_start_0.htm">start</a> method to begin the animation. The following example will animate a node along it&#39;s Y-axis from <b>5</b> to <b>100</b> Y-coordinate, using the <a href="T_MindFusion_Animations_AnimationType.htm">Power</a> animation function and the <a href="T_MindFusion_Animations_EasingType.htm">EaseOut</a> easing function:</p>
+		<p>
+			<table class="syntax" codelanguage="JavaScript" cellspacing="0">
+				<tbody>
+					<tr>
+						<th><span style="float: left;">JavaScript</span>
+							<span class="copyCode" onclick="CopyCode(this);" onkeypress="CopyCode_CheckKey(this);" onmouseover="ChangeCopyCodeIcon(this, true);" onmouseout="ChangeCopyCodeIcon(this, false);">
+								<img src="copycode.png" title="Copy Code" style="border-width: 0;">&nbsp;Copy Code</span>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<p>
+								<span class="codeKeyword">var</span> Animation = MindFusion.Animations.Animation;<br />
+								<span class="codeKeyword">var</span> AnimationType = MindFusion.Animations.AnimationType;<br />
+								<span class="codeKeyword">var</span> EasingType = MindFusion.Animations.EasingType;<br />
+								<br>
+
+								<span class="codeKeyword">var</span> options =
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;duration: <span class="codeNumber">500</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromValue: <span class="codeNumber">5</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toValue: <span class="codeNumber">100</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;animationType: AnimationType.Power,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param: <span class="codeNumber">2</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;easingType: EasingType.EaseOut<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;};<br />
+								<span class="codeKeyword">var</span> animation = <span class="codeKeyword">new</span> Animation(node, options);<br />
+								animation.start();<br />
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</p>
+		<a href="javascript:onAnimateOne();">Animate</a>
+		<div style="margin-top: 5px; width: 150px; height: 150px; overflow: hidden; border: 1px solid;">
+			<canvas id="exampleOne" width="210" height="210">This page requires a browser that supports HTML 5 Canvas element.
+			</canvas>
+		</div>
+		<p style="font-style: italic;">Example 1</p>
+		<h2>Looping Animations</h2>
+		<p>To create looping animations, use the <a href="M_MindFusion_Animations_Animation_setRepeat_1_Boolean.htm">repeat</a> and <a href="M_MindFusion_Animations_Animation_setRepeat_1_Boolean.htm">reverse</a> properties. To stop an animation, call its <a href="M_MindFusion_Animations_Animation_stop_0.htm">stop</a> method.</p>
+		<table class="syntax" codelanguage="JavaScript" cellspacing="0">
+			<tbody>
+				<tr>
+					<th><span style="float: left;">JavaScript</span>
+						<span class="copyCode" onclick="CopyCode(this);" onkeypress="CopyCode_CheckKey(this);" onmouseover="ChangeCopyCodeIcon(this, true);" onmouseout="ChangeCopyCodeIcon(this, false);">
+							<img src="copycode.png" title="Copy Code" style="border-width: 0;">&nbsp;Copy Code</span>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							<span class="codeComment">// Use this property to repeat the animation until stopped.</span><br />
+							animation.setRepeat(<span class="codeKeyword">true</span>);<br />
+							<span class="codeComment">// Use this property to reverse the to and from values.</span><br />
+							animation.setReverse(<span class="codeKeyword">true</span>);<br />
+							<br />
+							<span class="codeComment">// Use the stop method to complete the animation.</span><br />
+							animation.stop();
+						</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<a id="exampleTwoAnchor" href="javascript:onAnimateTwo();">Animate</a>
+		<div style="margin-top: 5px; width: 150px; height: 150px; overflow: hidden; border: 1px solid;">
+			<canvas id="exampleTwo" width="210" height="210">This page requires a browser that supports HTML 5 Canvas element.
+			</canvas>
+		</div>
+		<p style="font-style: italic;">Example 2</p>
+		<h2>OnUpdate Callback</h2>
+		<p>In order to specify which property will be animated, when instantiating an <b>Animation</b> instance, pass an <b>onUpdateCallback</b> function as a parameter to the object's <a href="C_MindFusion_Animations_Animation_Animation_4_MindFusion.Diagramming.DiagramItem_Object_Function_Fun.htm">constructor</a>. This callback function can be used to specify which property of the animated item will be animated. The callback signature should contain two arguments - the animation object instance and a value representing the animated property delta. This callback is called at every animation timer "tick". The following example creates a pulse-like effect, using an <b>onUpdateCallback</b>:</p>
+		<p>
+			<table class="syntax" codelanguage="JavaScript" cellspacing="0">
+				<tbody>
+					<tr>
+						<th><span style="float: left;">JavaScript</span>
+							<span class="copyCode" onclick="CopyCode(this);" onkeypress="CopyCode_CheckKey(this);" onmouseover="ChangeCopyCodeIcon(this, true);" onmouseout="ChangeCopyCodeIcon(this, false);">
+								<img src="copycode.png" title="Copy Code" style="border-width: 0;">&nbsp;Copy Code</span>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<p>
+								<span class="codeKeyword">var</span> Animation = MindFusion.Animations.Animation;<br />
+								<span class="codeKeyword">var</span> Utils = MindFusion.Diagramming.Utils;<br />
+								<br />
+								<span class="codeKeyword">var</span> options =
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;duration: <span class="codeNumber">550</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromValue: <span class="codeNumber">-0.15</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toValue: <span class="codeNumber">0.15</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repeat: <span class="codeKeyword">true</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reverse: <span class="codeKeyword">true</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;};<br />
+								<br />
+								<span class="codeComment">/**</span><br />
+								<span class="codeComment">* @param [Animation] animation The animation object instance.</span><br />
+								<span class="codeComment">* @param [Number] animationDelta A number representing the percentage of displacement </span>
+								<br />
+								<span class="codeComment">* of the animated property's value in the [fromValue, toValue] range.</span><br />
+								<span class="codeComment">*/</span><br />
+								<span class="codeKeyword">function</span> pulse(animation, animationDelta)<br />
+								{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="codeKeyword">var</span> bounds = animation.item.getBounds().clone();<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="codeKeyword">var</span> to = animation.getToValue();<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;bounds = Utils.inflate(bounds, to * animationDelta, to * animationDelta);<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;animation.item.setBounds(bounds, <span class="codeKeyword">true</span>);<br />
+								}<br />
+								<br />
+								<span class="codeKeyword">var</span> animation = <span class="codeKeyword">new</span> Animation(node, options, pulse);<br />
+								animation.start();<br />
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</p>
+		<a id="exampleThreeAnchor" href="javascript:onAnimateThree();">Animate</a>
+		<div style="margin-top: 5px; width: 150px; height: 150px; overflow: hidden; border: 1px solid;">
+			<canvas id="exampleThree" width="210" height="210">This page requires a browser that supports HTML 5 Canvas element.
+			</canvas>
+		</div>
+		<p style="font-style: italic;">Example 3</p>
+		<h2>Default Animation and Easing Functions</h2>
+		<p>The following example demonstrates the built-in animation and easing functions that the <b>Animation</b> class provides:</p>
+		<a href="javascript:onAnimateFour(0);">EaseIn</a>&nbsp;<a href="javascript:onAnimateFour(1);">EaseOut</a>&nbsp;<a href="javascript:onAnimateFour(2);">EaseInOut</a>&nbsp;<a href="javascript:onAnimateFour(3);">EaseOutIn</a>
+		<div style="margin-top: 5px; width: 816px; height: 255px; overflow: hidden; border: 1px solid;">
+			<canvas id="exampleFour" width="204" height="60">This page requires a browser that supports HTML 5 Canvas element.
+			</canvas>
+		</div>
+		<p style="font-style: italic;">Example 4</p>
+		<h2>Custom Animation Functions</h2>
+		<p>
+			In addition to the provided default animation functions, it is also possible to define custom animation effects. Set the <a href="M_MindFusion_Animations_Animation_setAnimationType_1_MindFusion.Animations.AnimationType.htm">AnimationType</a> to <b>Custom</b> and pass a custom animation function callback to the <b>Animation</b> constructor. The callback signature should contain two arguments - the time progressed as a percentage from the start of the animation and the user-set <a href="M_MindFusion_Animations_Animation_setParam_1_Object.htm">parameter</a>, used in the animation function. The following example uses a custom function&nbsp;
+			<img src="customAnimationFunction.png" style="width: 50px; position: relative; top: 20px; margin-top: -20px" />
+			where <i>x</i> is a value between 0 and 1 and <i>y</i> is a parameter, passed as an argument to the Animation constructor.
+		</p>
+		<br />
+		<p>
+			<table class="syntax" codelanguage="JavaScript" cellspacing="0">
+				<tbody>
+					<tr>
+						<th><span style="float: left;">JavaScript</span>
+							<span class="copyCode" onclick="CopyCode(this);" onkeypress="CopyCode_CheckKey(this);" onmouseover="ChangeCopyCodeIcon(this, true);" onmouseout="ChangeCopyCodeIcon(this, false);">
+								<img src="copycode.png" title="Copy Code" style="border-width: 0;">&nbsp;Copy Code</span>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<p>
+								<span class="codeKeyword">var</span> Animation = MindFusion.Animations.Animation;<br />
+								<span class="codeKeyword">var</span> AnimationType = MindFusion.Animations.AnimationType;<br />
+								<br />
+								<span class="codeKeyword">var</span> options =
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;duration: <span class="codeNumber">500</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromValue: <span class="codeNumber">5</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toValue: <span class="codeNumber">100</span>,<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param: <span class="codeNumber">5,</span><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;animationType: AnimationType.Custom<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;};<br />
+								<br />
+								<span class="codeComment">/**</span><br />
+								<span class="codeComment">* @param [Number] progress The time progress in the animation loop. A value between 0 and 1.</span><br />
+								<span class="codeComment">* @param [Object] param The user-set value, used to parameterize the animation function.</span><br />
+								<span class="codeComment">*/</span><br />
+								<span class="codeKeyword">function</span> custom(progress, param)<br />
+								{<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="codeKeyword">return</span> Math.pow(Math.E, <span class="codeNumber">1</span> - (<span class="codeNumber">1</span> / Math.pow(progress, param)));<br />
+								}<br />
+								<br />
+								<span class="codeKeyword">var</span> animation = new Animation(node, options, <span class="codeKeyword">null</span>, custom);<br />
+								animation.start();<br />
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</p>
+		<a href="javascript:onAnimateFive();">Animate</a>
+		<div style="margin-top: 5px; width: 150px; height: 150px; overflow: hidden; border: 1px solid;">
+			<canvas id="exampleFive" width="210" height="210">This page requires a browser that supports HTML 5 Canvas element.
+			</canvas>
+		</div>
+		<p style="font-style: italic;">Example 5</p>
+	</div>
+	<div id="nsfooter">
+		<table class="footer" cellspacing="0">
+			<tbody>
+				<tr>
+					<td style="vertical-align: middle">
+						<span class="copyright">© 2014 MindFusion</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		MindFusionImpl = "MsAjax";
+	</script>
+	<script src="MicrosoftAjax.js" type="text/javascript"></script>
+	<script src="MindFusion.Common.js" type="text/javascript"></script>
+	<script src="MindFusion.Diagramming.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+		var Diagram = MindFusion.Diagramming.Diagram;
+		var Behavior = MindFusion.Diagramming.Behavior;
+		var ShapeNode = MindFusion.Diagramming.ShapeNode;
+		var Utils = MindFusion.Diagramming.Utils;
+
+		var Rect = MindFusion.Drawing.Rect;
+
+		var Animation = MindFusion.Animations.Animation;
+		var AnimationType = MindFusion.Animations.AnimationType;
+		var EasingType = MindFusion.Animations.EasingType;
+		var AnimationEvents = MindFusion.Animations.Events;
+
+		var exampleOne, exampleTwo, exampleThree, exampleFour, exampleFive;
+		var animationTwo, animationThree;
+		var animationFourCompleted = -1;
+
+		Sys.Application.add_load(function (sender, args) {
+			exampleOne = $create(Diagram, null, null, null, $get("exampleOne"));
+			exampleOne.setZoomFactor(25);
+			exampleOne.setBehavior(Behavior.DoNothing);
+			exampleOne.getFactory().createShapeNode(50, 5, 50, 50);
+
+			exampleTwo = $create(Diagram, null, null, null, $get("exampleTwo"));
+			exampleTwo.setZoomFactor(25);
+			exampleTwo.setBehavior(Behavior.DoNothing);
+			exampleTwo.getFactory().createShapeNode(50, 5, 50, 50);
+
+			exampleThree = $create(Diagram, null, null, null, $get("exampleThree"));
+			exampleThree.setZoomFactor(25);
+			exampleThree.setBehavior(Behavior.DoNothing);
+			exampleThree.getFactory().createShapeNode(55, 55, 50, 50);
+			exampleThree.nodes[0].setBrush('Red');
+
+			exampleFour = $create(Diagram, null, null, null, $get("exampleFour"));
+			exampleFour.setBehavior(Behavior.DoNothing);
+			createFourthExample(exampleFour);
+
+			exampleFive = $create(Diagram, null, null, null, $get("exampleFive"));
+			exampleFive.setZoomFactor(25);
+			exampleFive.setBehavior(Behavior.DoNothing);
+			exampleFive.getFactory().createShapeNode(50, 5, 50, 50);
+		});
+
+		function createFourthExample(diagram) {
+
+			function addLane(x, color) {
+				var laneNode = new ShapeNode(diagram);
+				laneNode.setShape('Rectangle');
+				laneNode.setBrush(color);
+				laneNode.setLocked(true);
+				laneNode.setBounds(new Rect(x, 5, 30, 60));
+				laneNode.setShadowColor('Transparent');
+				diagram.addItem(laneNode);
+			}
+
+			function addLabelNode(x, y, text) {
+				var labelNode = new ShapeNode(diagram);
+				labelNode.setShape('Rectangle');
+				labelNode.setStroke('Transparent');
+				labelNode.setBrush('Transparent');
+				labelNode.setText(text);
+				labelNode.setBounds(new Rect(x, y, 25, 7));
+				labelNode.setLocked(true);
+				diagram.addItem(labelNode);
+			}
+
+			function onAnimationComplete(sender, args) {
+				if (animationFourCompleted == 6)
+					animationFourCompleted = -1;
+				else if (animationFourCompleted == -1)
+					animationFourCompleted = 1;
+				else
+					++animationFourCompleted;
+
+				setTimeout(function () {
+					var b = sender.item.getBounds();
+					sender.item.setBounds(new Rect(b.x, 12, b.width, b.height));
+				}, 500);
+			}
+
+			var f = diagram.getFactory();
+			var node, a;
+
+			addLane(2.5, "#FFC900");
+			addLabelNode(5, 5, "Linear");
+			node = f.createShapeNode(5, 12, 25, 10);
+			a = new Animation(node, { fromValue: 12, toValue: 50, duration: 1500 });
+			a.addEventListener(AnimationEvents.animationComplete, onAnimationComplete);
+			node.setTag(a);
+
+			addLane(32.5, "#BFA130");
+			addLabelNode(35, 5, "Power");
+			node = f.createShapeNode(35, 12, 25, 10);
+			a = new Animation(node, { animationType: 1, param: 2, fromValue: 12, toValue: 50, duration: 1500 });
+			a.addEventListener(AnimationEvents.animationComplete, onAnimationComplete);
+			node.setTag(a);
+
+			addLane(62.5, "#A68200");
+			addLabelNode(65, 5, "Exponential");
+			node = f.createShapeNode(65, 12, 25, 10);
+			a = new Animation(node, { animationType: 2, param: 10, fromValue: 12, toValue: 50, duration: 1500 });
+			a.addEventListener(AnimationEvents.animationComplete, onAnimationComplete);
+			node.setTag(a);
+
+			addLane(92.5, "#FFD640");
+			addLabelNode(95, 5, "Circular");
+			node = f.createShapeNode(95, 12, 25, 10);
+			a = new Animation(node, { animationType: 3, fromValue: 12, toValue: 50, duration: 1500 });
+			a.addEventListener(AnimationEvents.animationComplete, onAnimationComplete);
+			node.setTag(a);
+
+			addLane(122.5, "#FFE173");
+			addLabelNode(125, 5, "BackBow");
+			node = f.createShapeNode(125, 12, 25, 10);
+			a = new Animation(node, { animationType: 4, param: 1.5, fromValue: 12, toValue: 50, duration: 1500 });
+			a.addEventListener(AnimationEvents.animationComplete, onAnimationComplete);
+			node.setTag(a);
+
+			addLane(152.5, "#FFFC00");
+			addLabelNode(155, 5, "Bounce");
+			node = f.createShapeNode(155, 12, 25, 10);
+			a = new Animation(node, { animationType: 5, fromValue: 12, toValue: 50, duration: 1500 });
+			a.addEventListener(AnimationEvents.animationComplete, onAnimationComplete);
+			node.setTag(a);
+
+			addLane(182.5, "#BFBD30");
+			addLabelNode(185, 5, "Elastic");
+			node = f.createShapeNode(185, 12, 25, 10);
+			a = new Animation(node, { animationType: 6, param: 0.5, fromValue: 12, toValue: 50, duration: 1500 });
+			a.addEventListener(AnimationEvents.animationComplete, onAnimationComplete);
+			node.setTag(a);
+		}
+
+	</script>
+	<script type="text/javascript">
+		function onAnimateOne() {
+			var node = exampleOne.nodes[0];
+			var options = {
+				duration: 500, fromValue: 5, toValue: 100, animationType: AnimationType.Power, param: 2, easingType: EasingType.EaseOut
+			}
+			new Animation(node, options).start();
+		}
+		function onAnimateTwo() {
+			var a = $get('exampleTwoAnchor');
+			if (a.innerHTML == 'Animate' && !animationTwo) {
+				var node = exampleTwo.nodes[0];
+				var options = {
+					duration: 500, fromValue: 5, toValue: 100, animationType: AnimationType.Power, param: 2, easingType: EasingType.EaseOut, repeat: true, reverse: true
+				}
+				animationTwo = new Animation(node, options);
+				animationTwo.start();
+				a.innerHTML = "Stop";
+			}
+			else {
+				animationTwo.stop();
+				animationTwo = null;
+				a.innerHTML = "Animate";
+			}
+		}
+
+		function onAnimateThree() {
+			var a = $get('exampleThreeAnchor');
+			if (a.innerHTML == 'Animate' && !animationThree) {
+
+				function pulse(animation, delta) {
+					var bounds = animation.item.getBounds().clone();
+					var to = animation.getToValue();
+					bounds = Utils.inflate(bounds, to * delta, to * delta);
+					animation.item.setBounds(bounds, true);
+				}
+
+				var node = exampleThree.nodes[0];
+				var options = { duration: 550, repeat: true, reverse: true, fromValue: -0.15, toValue: 0.15 };
+				animationThree = new Animation(node, options, pulse);
+				animationThree.start();
+				a.innerHTML = "Stop";
+			}
+			else {
+				exampleThree.nodes[0].setBounds(new Rect(55, 55, 50, 50));
+				animationThree.stop();
+				animationThree = null;
+				a.innerHTML = "Animate";
+			}
+		}
+
+		function onAnimateFour(easingType) {
+			var delay = false;
+			if (animationFourCompleted != -1) {
+				delay = true;
+				Array.forEach(exampleFour.nodes, function (node) {
+					if (node.getLocked())
+						return;
+					var a = node.getTag();
+					if (a.isRunning())
+						a.stop();
+				});
+			}
+
+			function start() {
+				Array.forEach(exampleFour.nodes, function (node) {
+					if (node.getLocked())
+						return;
+					var a = node.getTag();
+					a.setEasingType(easingType);
+					a.start();
+				});
+			}
+
+			if (delay)
+				setTimeout(function () { start() }, 1000);
+			else
+				start();
+		}
+
+		function onAnimateFive() {
+			var node = exampleFive.nodes[0];
+			function custom(progress, param) {
+				return Math.pow(Math.E, 1 - (1 / Math.pow(progress, param)));
+			}
+			var options = {
+				duration: 500, fromValue: 5, toValue: 100, animationType: AnimationType.Custom, param: 5
+			}
+			new Animation(node, options, null, custom).start();
+		}
+	</script>
+</body>
+</html>

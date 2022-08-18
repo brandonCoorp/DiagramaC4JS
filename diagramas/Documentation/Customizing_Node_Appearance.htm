@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta id='metaFileNameId' name='id' content='34129' />
+<title>Customizing Node Appearance</title>
+<link type='text/css' href='xstyle.css' rel='stylesheet' media='all' />
+<script src='script.js' language='javascript' type='text/javascript'> </script>
+<script src='common.js' language='javascript' type='text/javascript'> </script>
+<xml>
+<MSHelp:Attr Name="Product" Value="JsDiagram">
+</xml>
+</head>
+<body style='margin: 0;'>
+<img src='collapse.png' title='Collapse Section' id='collapseImage' style='display: none; height: 0; width: 0;' /><img src='expand.png' title='Expand Section' id='expandImage' style='display: none; height: 0; width: 0;' /><img src='collapsesmall.png' title='Collapse All' id='collapseAllImage' style='display: none; height: 0; width: 0;' /><img src='expandsmall.png' title='Expand All' id='expandAllImage' style='display: none; height: 0; width: 0;' /><input type="hidden" id="userDataCache" class="userDataStyle"><img src='arrow.png' title='DropDown image' id='dropDownImage' style='display: none; height: 0; width: 0;' /><img src='arrowh.png' title='DropDown image' id='dropDownHoverImage' style='display: none; height: 0; width: 0;' /><img src='copycode.png' title='Copy Code' id='copyCodeImage' style='display: none; height: 0; width: 0;' /><img src='copycodeh.png' title='Copy Code' id='copyCodeHoverImage' style='display: none; height: 0; width: 0;' /><div id='nsbanner'>
+<table class='bannerparthead' cellspacing='0'>
+<tr>
+<td><span class='gtitle'>MindFusion.Diagramming for JavaScript Programmer's Guide</span></td>
+</tr>
+<tr>
+<td style='border-bottom: solid 1px #C8CDDE;'><span class='title'>Customizing Node Appearance</span></td>
+</tr>
+</table>
+</div>
+<div id='nstext'>
+<p>Nodes can have different shape, background image or color.&#160; They can also have differently aligned text.</p><h2>Customizing the shape of nodes</h2><p><a id='32485' href='CC_T_MindFusion_Diagramming_ShapeNode_0.htm' title=''>ShapeNode</a> has&#160;<a id='32507' href='M_MindFusion_Diagramming_ShapeNode_setShape_1_Shape.htm' title=''>setShape</a> method that sets the shape of the node. The argument&#160;can be either&#160;a <a id='32440' href='CC_T_MindFusion_Diagramming_Shape_0.htm' title=''>Shape</a> object&#160;(returned by one of the static&#160;methods of the <a id='32438' href='CC_T_MindFusion_Diagramming_Shapes_0.htm' title=''>Shapes</a> class), or&#160;a string id of the shape, which coincides with the name of the method that gets it. Here is an example:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>myNode.setShape("Arrow1");</p></td></tr></table></p><p><a id='41624' href='CC_T_MindFusion_Diagramming_TableNode_0.htm' title=''>TableNode</a> and <a id='45247' href='CC_T_MindFusion_Diagramming_ContainerNode_0.htm' title=''>ContainerNode</a> provide <a id='57817' href='M_MindFusion_Diagramming_ContainerNode_setShape_1_SimpleShape.htm' title=''>setShape</a> method too, but their shapes can only be set to either rectangle or rounded rectangle, as specified via <a id='57833' href='T_MindFusion_Diagramming_SimpleShape_0.htm' title=''>SimpleShape</a> enumeration.</p><h2>Bitmap images</h2><p>Each node&#160;can&#160;display an&#160;image as its content. The image is set&#160;via the&#160;<a id='32501' href='M_MindFusion_Diagramming_ShapeNode_setImage_1_Image.htm' title=''>setImage</a>&#160;method. Be default it is centered inside the node. You can change the alignment&#160;by calling&#160;<a id='57982' href='M_MindFusion_Diagramming_ShapeNode_setImageAlign_1_ImageAlign_1.htm' title=''>setImageAlign</a>. Images can be loaded by their URL&#160;via <a id='32503' href='M_MindFusion_Diagramming_ShapeNode_setImageLocation_1_String.htm' title=''>setImageLocation</a>.</p><h2>Fill color</h2><p>Nodes can be painted in any color that you choose. Use <a id='32344' href='M_MindFusion_Diagramming_DiagramItem_setBrush_1_Object.htm' title=''>setBrush</a> to specify how the node is painted.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>myNode.setBrush("Red");</p></td></tr></table></p><h2>Linear gradients</h2><p>Nodes can be filled using linear gradients by passing objects in following format to <a id='32344' href='M_MindFusion_Diagramming_DiagramItem_setBrush_1_Object.htm' title=''>setBrush</a>. If the gradient should blend only two colors, they can be specified using <b>color1</b> and <b>color2</b> fields instead of <b>colorStops</b>.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var brush1 =<br/>{<br/>&#160;type: "LinearGradientBrush",<br/>&#160;colorStops:<br/>&#160;[<br/>&#160;&#160;{ position: 0, color: "red" },<br/>&#160;&#160;{ position: 0.5, color: "green" },<br/>&#160;&#160;{ position: 1, color: "blue" }<br/>&#160;],<br/>&#160;angle: 30<br/>};<br/>myNode.setBrush(brush1);</p></td></tr></table></p><h2>Radial gradients</h2><p>Nodes can be filled using&#160;radial gradients by passing objects in following format to <a id='32344' href='M_MindFusion_Diagramming_DiagramItem_setBrush_1_Object.htm' title=''>setBrush</a>. If the gradient should blend only two colors, they can be specified using color1 and color2 fields instead of colorStops.</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var brush2 =<br/>{<br/>&#160;type: "RadialGradientBrush",<br/>&#160;colorStops:<br/>&#160;[<br/>&#160; { position: 0, color: "white" },<br/>&#160; { position: 0.5, color: "lightGray" },<br/>&#160; { position: 1, color: "blue" }<br/>&#160;],<br/>&#160;x1: 20, y1: 20, radius1: 30,<br/>&#160;x2: 40, y2: 20, radius2: 80<br/>};<br/>myNode.setBrush(brush2);</p></td></tr></table></p><h2>Text and font</h2><p>Nodes can have text with customizable font and text alignment. Use <a id='32348' href='M_MindFusion_Diagramming_DiagramItem_setText_1_String.htm' title=''>setText</a> to specify the text for the node; <a id='32509' href='M_MindFusion_Diagramming_ShapeNode_setTextColor_1_String.htm' title=''>setTextColor</a>&#160;changes the color of the text and <a id='32508' href='M_MindFusion_Diagramming_ShapeNode_setTextAlignment_1_Alignment.htm' title=''>setTextAlignment</a> -&#160;its alignment. The <a id='32798' href='M_MindFusion_Diagramming_DiagramItem_setFont_1_Font.htm' title=''>setFont</a> method lets you specify a distinct font for each node:</p><p><table class='syntax' codeLanguage='JavaScript' cellspacing='0'><tr><th><span style='float: left;'>JavaScript</span>
+<span class='copyCode' onclick='CopyCode(this);' onkeypress='CopyCode_CheckKey(this);' onmouseover='ChangeCopyCodeIcon(this, true);' onmouseout='ChangeCopyCodeIcon(this, false);'>
+<img src='copycode.png' title='Copy Code' style='border-width: 0;' />&#160;Copy Code</span>
+</th></tr><tr><td><p>var Font = MindFusion.Drawing.Font;</p><p>//the two arguments specify whether the font is bold and italic<br/>startNode.setFont(new Font("sans-serif", 5, true, false));</p></td></tr></table></p><h2>Styled Text</h2><p>The <a id='56631' href='M_MindFusion_Diagramming_ShapeNode_setEnableStyledText_1_Boolean.htm' title=''>EnableStyledText</a> property of shape nodes and tables enables or disables styled text rendering. Styled text can have various attributes applied to the characters it contains. The attributes are specified using HTML-like formatting tags embedded in the raw text. The following table lists the currently supported style tags:<br/></p><p><table cellspacing='0' style='width: 100%;' class='common'><col width='50%'></col><col width='50%'></col><tr><th><p>Tag</p></th><th><p>Description</p></th></tr><tr><td><p>&lt;i&gt;text&lt;/i&gt;</p></td><td><p>Indicates italic text.</p></td></tr><tr><td><p>&lt;b&gt;text&lt;/b&gt;</p></td><td><p>Indicates bold text.</p></td></tr><tr><td><p>&lt;u&gt;text&lt;/u&gt;</p></td><td><p>Indicates underlined text.</p></td></tr><tr><td><p>&lt;sub&gt;text&lt;/sub&gt;</p></td><td><p>Indicates subscript.</p></td></tr><tr><td><p>&lt;sup&gt;text&lt;/sup&gt;</p></td><td><p>Indicates superscript.</p></td></tr><tr><td><p>&lt;color=#RRGGBB&gt;text&lt;/color&gt;</p></td><td><p>Changes the color of the text. The red green and blue color channels are specified as two-digit hexadecimal numbers.</p></td></tr><tr><td><p>&lt;br /&gt;</p></td><td><p>Indicates line break.</p></td></tr><tr><td><p>&lt;a=url&gt;text&lt;/a&gt;</p></td><td><p>Renders&#160;specified text as a hyperlink and raises <a id='90697' href='F_MindFusion_Diagramming_Events_hyperlinkClicked.htm' title=''>hyperlinkClicked</a> event when link has been clicked.</p></td></tr></table></p>
+</div>
+<div id='nsfooter'>
+<table class='footer' cellspacing='0'>
+<tr>
+<td valign='middle'>
+<span class='copyright'>© 2021 MindFusion</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
